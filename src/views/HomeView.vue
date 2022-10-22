@@ -1,18 +1,37 @@
+<script setup lang="ts">
+import HomeCategoryList from "@/components/HomeCategoryList.vue";
+</script>
+
+<style scoped>
+.home-page {
+  display: flex;
+}
+
+.welcome-text {
+  width: 20em;
+}
+</style>
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="home-page">
+    <section class="welcome-text flow-content container dark-background">
+      <h2>Welcome to Another Bookstore</h2>
+      <p>
+        Another Bookstore is a client-side application written using Vue
+        components.
+      </p>
+      <p>
+        It includes a home page and a category page. Both pages have the same
+        header and footer.
+      </p>
+      <p>
+        You can navigate to the category page by choosing any category from the
+        dropdown menu in the header. You can navigate to the home page by
+        clicking on the logo in the header.
+      </p>
+      <p>Take some time and explore the code.</p>
+    </section>
+    <section class="category-images container">
+      <home-category-list></home-category-list>
+    </section>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
-export default defineComponent({
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
-});
-</script>

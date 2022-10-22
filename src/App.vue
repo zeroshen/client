@@ -1,30 +1,23 @@
+<script setup lang="ts">
+import { provide } from "vue";
+import { CategoryItem } from "@/types";
+import AppHeader from "@/components/AppHeader.vue";
+import AppFooter from "@/components/AppFooter.vue";
+const categoryList: CategoryItem[] = [
+  { categoryId: 1001, name: "Classics" },
+  { categoryId: 1002, name: "Fantasy" },
+  { categoryId: 1003, name: "Mystery" },
+  { categoryId: 1004, name: "Romance" },
+];
+provide("categoryList", categoryList);
+</script>
+
+<style></style>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div id="app">
+    <app-header></app-header>
+    <router-view></router-view>
+    <app-footer></app-footer>
+  </div>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
