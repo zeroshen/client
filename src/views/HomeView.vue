@@ -1,37 +1,25 @@
-<script setup lang="ts">
-import HomeCategoryList from "@/components/HomeCategoryList.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .home-page {
   display: flex;
 }
 
-.welcome-text {
-  width: 20em;
+.components-list {
+  width: 50%;
+}
+
+.game-button-container {
+  width: 50%;
 }
 </style>
 <template>
   <div class="home-page">
-    <section class="welcome-text flow-content container dark-background">
-      <h2>Welcome to Another Bookstore</h2>
-      <p>
-        Another Bookstore is a client-side application written using Vue
-        components.
-      </p>
-      <p>
-        It includes a home page and a category page. Both pages have the same
-        header and footer.
-      </p>
-      <p>
-        You can navigate to the category page by choosing any category from the
-        dropdown menu in the header. You can navigate to the home page by
-        clicking on the logo in the header.
-      </p>
-      <p>Take some time and explore the code.</p>
+    <section class="components-list">
+      <div>List</div>
     </section>
-    <section class="category-images container">
-      <home-category-list></home-category-list>
+    <section class="game-button-container">
+      <div class="button">Button</div>
     </section>
   </div>
 </template>

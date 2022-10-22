@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import CategoryView from "@/views/CategoryView.vue";
+import GameView from "@/views/GamesView.vue";
+import ComponentsView from "@/views/ComponentsView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,9 +10,15 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView,
   },
   {
-    path: "/category/:name",
-    name: "category-view",
-    component: CategoryView,
+    path: "/game/:name",
+    name: "games-view",
+    component: GameView,
+    props: true,
+  },
+  {
+    path: "/components/:name",
+    name: "components-view",
+    component: ComponentsView,
     props: true,
   },
 ];

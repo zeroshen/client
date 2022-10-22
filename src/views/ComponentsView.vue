@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { provide } from "vue";
 import { BookItem } from "@/types";
-import CategoryNav from "@/components/CategoryNav.vue";
-import CategoryBookList from "@/components/CategoryBookList.vue";
 const bookList: BookItem[] = [
   {
     bookId: 1001,
@@ -33,14 +30,8 @@ const bookList: BookItem[] = [
     isPublic: true,
   },
 ];
-// provide("bookList", bookList);
 </script>
 
-<style scoped></style>
-
 <template>
-  <div>
-    <category-nav></category-nav>
-    <category-book-list :bookList="bookList"> </category-book-list>
-  </div>
+  <div>Components</div>
 </template>

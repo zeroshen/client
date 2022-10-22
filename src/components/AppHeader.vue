@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import HeaderDropdown from "@/components/HeaderDropdown.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 header {
@@ -50,7 +48,6 @@ header {
     <section class="header-dropdown-and-cart">
       <button class="button">cart (0)</button>
       <button class="button">login</button>
-      <header-dropdown></header-dropdown>
     </section>
   </header>
 </template>
