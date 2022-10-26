@@ -9,22 +9,31 @@
 
 .components-list {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 150px;
 }
 
 .game-button-container {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>
 <template>
   <div class="home-page">
     <section class="components-list">
-      <router-link to="../components/Button">Button</router-link>
-      <router-link to="../components/Alerts">Alerts</router-link>
-      <router-link to="../components/Input">Input</router-link>
-      <router-link to="../components/Image">Image</router-link>
+      <div>View the components.</div>
+      <li><router-link to="../components/Button">Button</router-link></li>
+      <li><router-link to="../components/Alerts">Alerts</router-link></li>
+      <li><router-link to="../components/Inputs">Inputs</router-link></li>
+      <li><router-link to="../components/Image">Images</router-link></li>
     </section>
     <section class="game-button-container">
-      <div class="button">Button</div>
+      <div class="button">Start the Game!</div>
     </section>
   </div>
 </template>
