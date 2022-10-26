@@ -36,6 +36,10 @@ export default defineComponent({
         this.disabledH = true;
         this.disabledW = false;
         this.disabledRatio = false;
+      } else if (this.mode == "auto") {
+        this.disabledH = true;
+        this.disabledW = false;
+        this.disabledRatio = true;
       } else {
         this.disabledW = this.disabledH = false;
         this.disabledRatio = true;
@@ -56,9 +60,10 @@ export default defineComponent({
 .image-tuner {
   background-color: #afafaf;
   min-width: 100%;
-  min-height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
+  flex: 1;
 }
 .tuner-selections {
   background-color: #fafafa;
@@ -69,6 +74,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 25px;
 }
 
 .tuner-selections .tuner-sliders {
@@ -94,12 +100,23 @@ export default defineComponent({
 }
 
 .tuner-display {
-  background-color: orange;
+  background-color: #fafafa;
   width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.tuner-display img {
+  background-color: #4e4e4e;
+  width: v-bind(imgWidth + "px");
+  height: v-bind(imgHeight + "px");
+  object-fit: v-bind(imgFit);
+}
+
+.tuner-display .img-auto {
+  height: auto;
 }
 </style>
 
@@ -111,6 +128,7 @@ export default defineComponent({
           Selected Mode: {{ mode }} <br />
           <select v-model="mode" @change="toggleHW">
             <option value="height-width">Width & Height</option>
+            <option value="auto">Auto Height</option>
             <optgroup label="Ratio Baseline">
               <option value="height">Height</option>
               <option value="width">Width</option>
@@ -122,7 +140,7 @@ export default defineComponent({
           <input
             type="range"
             min="50"
-            max="225"
+            max="400"
             class="tuner-slider"
             name="width"
             v-model="imgWidth"
@@ -135,7 +153,7 @@ export default defineComponent({
           <input
             type="range"
             min="50"
-            max="225"
+            max="400"
             class="tuner-slider"
             name="height"
             v-model="imgHeight"
@@ -189,6 +207,13 @@ export default defineComponent({
     </div>
     <div class="tuner-display">
       <img
+        v-if="mode == 'auto'"
+        :src="require('@/assets/images/books/' + filename)"
+        alt="image-sample"
+        class="img-auto"
+      />
+      <img
+        v-else
         :src="require('@/assets/images/books/' + filename)"
         alt="image-sample"
       />

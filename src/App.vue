@@ -12,7 +12,14 @@ const categoryList: CategoryItem[] = [
 provide("categoryList", categoryList);
 </script>
 
-<style></style>
+<style>
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: red;
+}
+</style>
 
 <template>
   <div id="app">

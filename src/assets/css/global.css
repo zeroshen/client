@@ -161,7 +161,7 @@ body {
 
     /* layout properties (not inherited) */
     margin: 0 auto;
-    max-width: 70rem;
+    max-width: 100rem;
     min-height: 100%;
 }
 
