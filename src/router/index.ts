@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 import GameView from "@/views/GamesView.vue";
 import ComponentsView from "@/views/ComponentsView.vue";
+import ImageTuner from "@/components/ImageTuner.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "home-view",
-    component: HomeView,
+    name: "image-tuner",
+    component: ImageTuner,
   },
   {
     path: "/game/:name",

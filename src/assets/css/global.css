@@ -144,6 +144,11 @@ textarea {
     color: whitesmoke;
 }
 
+/* HTML */
+html{
+    height: 100%;
+}
+
 /* BODY */
 
 /* These global font properties with be inherited by child elements. */
@@ -157,6 +162,7 @@ body {
     /* layout properties (not inherited) */
     margin: 0 auto;
     max-width: 70rem;
+    min-height: 100%;
 }
 
 /* BUTTONS */
