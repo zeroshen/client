@@ -58,7 +58,6 @@ export default defineComponent({
 
 <style scoped>
 .image-tuner {
-  background-color: #afafaf;
   min-width: 100%;
   height: 100%;
   display: flex;
@@ -80,8 +79,10 @@ export default defineComponent({
 .tuner-selections .tuner-sliders {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: flex-end;
-  width: 75%;
+  gap: 5px;
+  width: 90%;
 }
 
 .tuner-selections .tuner-sliders .tuner-slider {
@@ -162,7 +163,7 @@ export default defineComponent({
           />
         </div>
         <div class="tuner-sliders">
-          <label for="ratio">Image Width/Height ratio: {{ imgWHRatio }}%</label>
+          <label for="ratio">Ratio: {{ imgWHRatio }}% </label>
           <input
             type="range"
             min="10"
