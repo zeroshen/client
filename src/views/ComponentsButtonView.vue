@@ -3,16 +3,20 @@
 <style scoped>
 .home-page {
   display: flex;
-  flex: 1;
-  min-height: 100%;
 }
-
 .components-list {
-  width: 50%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
 }
-
 .game-button-container {
-  width: 50%;
+  width: 80%;
+}
+code {
+  padding: 10px;
+  display: block;
+  white-space: pre;
+  background-color: lightgrey;
 }
 </style>
 <template>
@@ -21,10 +25,13 @@
       <router-link to="../components/Button">Button</router-link>
       <router-link to="../components/Alerts">Alerts</router-link>
       <router-link to="../components/Input">Input</router-link>
-      <router-link to="../components/Image">Image</router-link>
     </section>
     <section class="game-button-container">
-      <div class="button">Button</div>
+      <pre>
+        <code>
+         1234
+        </code>
+      </pre>
     </section>
   </div>
 </template>

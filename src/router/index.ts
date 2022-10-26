@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import GameView from "@/views/GamesView.vue";
+import HomeView from "@/views/HomeView.vue";
 import ComponentsView from "@/views/ComponentsView.vue";
 import ImageTuner from "@/components/ImageTuner.vue";
+import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "image-tuner",
-    component: ImageTuner,
+    name: "home-view",
+    component: HomeView,
   },
   {
     path: "/game/:name",
@@ -15,10 +17,17 @@ const routes: Array<RouteRecordRaw> = [
     component: GameView,
     props: true,
   },
+  /*Hard code need change later!*/
   {
-    path: "/components/:name",
-    name: "components-view",
-    component: ComponentsView,
+    path: "/components/Button",
+    name: "components-button-view",
+    component: ComponentsButtonView,
+    props: true,
+  },
+  {
+    path: "/components/image",
+    name: "components-image-view",
+    component: ImageTuner,
     props: true,
   },
 ];
