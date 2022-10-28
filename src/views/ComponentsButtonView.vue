@@ -1,5 +1,42 @@
 <script setup lang="ts"></script>
 
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  data() {
+    const str =
+      "  button {\n" +
+      "  padding: 10px 20px;\n" +
+      "  border: 1px solid #ddd;\n" +
+      "  color: #333;\n" +
+      "  background-color:#fff;\n" +
+      "  border-radius: 4px;\n" +
+      "  font-size: 14px;\n" +
+      "  font-family: arail;\n" +
+      "  cursor: pointer;\n" +
+      "  &[disabled]{\n" +
+      "    cursor: not-allowed;\n" +
+      "  }\n" +
+      "  &.danger {\n" +
+      "    background-color: #ff4949;\n" +
+      "    color: #fff;\n" +
+      "  }\n" +
+      "  &.success {\n" +
+      "    background-color: #13ce66;\n" +
+      "    color: #fff;\n" +
+      "  }\n" +
+      "  &.info {\n" +
+      "    background-color: #50bfff;\n" +
+      "    color: #fff;\n" +
+      "  }\n" +
+      "}";
+    return {
+      str,
+    };
+  },
+});
+</script>
 <style scoped>
 .page {
   display: flex;
@@ -36,9 +73,10 @@ code {
     <section class="code-container">
       <pre>
         <code>
-         1234
+         {{str}}
         </code>
       </pre>
+      <button>Example</button>
     </section>
   </div>
 </template>
