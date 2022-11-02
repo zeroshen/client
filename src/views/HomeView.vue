@@ -34,7 +34,7 @@
       <li><router-link to="../components/Spinner">Spinner</router-link></li>
       <li><router-link to="../components/NavBar">NavBar</router-link></li>
       <li>
-        <router-link to="../components/TimePicker">TimePicker</router-link>
+        <router-link to="../components/PopOver">PopOver</router-link>
       </li>
       <li><router-link to="../components/Image">Images</router-link></li>
       <li><router-link to="../components/Card">Card</router-link></li>

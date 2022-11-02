@@ -11,7 +11,7 @@ import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
 import CardTuner from "@/components/CardTuner.vue";
 import ComponentsSpinnerView from "@/views/ComponentsSpinnerView.vue";
 import ComponentsNavBarView from "@/views/ComponentsNavBarView.vue";
-import ComponentsTimePickerView from "@/views/ComponentsTimePickerView.vue";
+import ComponentsPopOverView from "@/views/ComponentsPopOverView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -69,9 +69,9 @@ const routes: Array<RouteRecordRaw> = [
     props: true,
   },
   {
-    path: "/components/TimePicker",
-    name: "components-time-picker-view",
-    component: ComponentsTimePickerView,
+    path: "/components/PopOver",
+    name: "components-pop-over-view",
+    component: ComponentsPopOverView,
     props: true,
   },
   {

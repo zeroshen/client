@@ -8,20 +8,32 @@ export default defineComponent({
     const str =
       " \n" +
       "CSS Part:\n" +
-      "button {\n" +
-      "  padding: 10px 20px;\n" +
-      "  border: 1px solid #ddd;\n" +
-      "  color: #333;\n" +
-      "  background-color:#fff;\n" +
+      ".popover {\n" +
+      "  position: relative;\n" +
+      "  width: 200px;\n" +
+      "  height: 100px;\n" +
+      "  background-color: rgb(233, 212, 222);\n" +
       "  border-radius: 4px;\n" +
-      "  font-size: 14px;\n" +
-      "  font-family: arail;\n" +
-      "  cursor: pointer;\n" +
-      "  width: 100px;\n" +
+      "  top: 50px;\n" +
+      "  left: 50px;\n" +
+      "  box-shadow: 3px -2px 4px #aaa;\n" +
+      "}\n" +
+      ".popover-arrow {\n" +
+      "  position: absolute;\n" +
+      "  top: -18px;\n" +
+      "  left: 20px;\n" +
+      "  border-left: 20px solid transparent;\n" +
+      "  border-right: 20px solid transparent;\n" +
+      "  border-bottom: 20px solid rgb(233, 212, 222);\n" +
+      "  width: 0;\n" +
+      "  height: 0;\n" +
+      "  -webkit-filter: drop-shadow(0 -2px 2px #aaa);\n" +
       "}\n" +
       "\n" +
       "Vue template Part:\n" +
-      "<button>Example</button>";
+      '<div class="popover">\n' +
+      '     <div class="popover-arrow"></div>\n' +
+      "</div>";
     return {
       str,
     };
@@ -52,22 +64,32 @@ code {
   white-space: pre;
   background-color: lightgrey;
 }
-button {
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  color: #333;
-  background-color: #fff;
+.popover {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: rgb(233, 212, 222);
   border-radius: 4px;
-  font-size: 14px;
-  font-family: arail;
-  width: 100px;
-  cursor: pointer;
+  top: 50px;
+  left: 50px;
+  box-shadow: 3px -2px 4px #aaa;
+}
+.popover-arrow {
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid rgb(233, 212, 222);
+  width: 0;
+  height: 0;
+  -webkit-filter: drop-shadow(0 -2px 2px #aaa);
 }
 .components {
   width: 80%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -81,14 +103,17 @@ button {
       <li><router-link to="../components/Image">Images</router-link></li>
     </section>
     <section class="code-container">
-      <h1>Button</h1>
+      <h1>PopOver</h1>
       <pre>
         <code>
          {{str}}
         </code>
       </pre>
       <section class="components">
-        <button>Example</button>
+        <div class="popover">
+          <div class="popover-arrow"></div>
+        </div>
+        <br />
       </section>
     </section>
   </div>
