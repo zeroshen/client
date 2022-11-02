@@ -6,7 +6,9 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     const str =
-      "  button {\n" +
+      " \n" +
+      "CSS Part:\n" +
+      "button {\n" +
       "  padding: 10px 20px;\n" +
       "  border: 1px solid #ddd;\n" +
       "  color: #333;\n" +
@@ -15,22 +17,11 @@ export default defineComponent({
       "  font-size: 14px;\n" +
       "  font-family: arail;\n" +
       "  cursor: pointer;\n" +
-      "  &[disabled]{\n" +
-      "    cursor: not-allowed;\n" +
-      "  }\n" +
-      "  &.danger {\n" +
-      "    background-color: #ff4949;\n" +
-      "    color: #fff;\n" +
-      "  }\n" +
-      "  &.success {\n" +
-      "    background-color: #13ce66;\n" +
-      "    color: #fff;\n" +
-      "  }\n" +
-      "  &.info {\n" +
-      "    background-color: #50bfff;\n" +
-      "    color: #fff;\n" +
-      "  }\n" +
-      "}";
+      "  width: 100px;\n" +
+      "}\n" +
+      "\n" +
+      "Vue template Part:\n" +
+      "<button>Example</button>";
     return {
       str,
     };
@@ -61,6 +52,25 @@ code {
   white-space: pre;
   background-color: lightgrey;
 }
+button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  color: #333;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: arail;
+  width: 100px;
+  cursor: pointer;
+}
+.components {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
 </style>
 <template>
   <div class="page">
@@ -76,7 +86,9 @@ code {
          {{str}}
         </code>
       </pre>
-      <button>Example</button>
+      <section class="components">
+        <button>Example</button>
+      </section>
     </section>
   </div>
 </template>
