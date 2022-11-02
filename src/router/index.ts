@@ -5,6 +5,7 @@ import ComponentsView from "@/views/ComponentsView.vue";
 import ImageTuner from "@/components/ImageTuner.vue";
 import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
 import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
+import ComponentsInputView from "@/views/ComponentsInputView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -29,6 +30,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/Alert",
     name: "components-alert-view",
     component: ComponentsAlertView,
+    props: true,
+  },
+  {
+    path: "/components/Input",
+    name: "components-input-view",
+    component: ComponentsInputView,
     props: true,
   },
   {
