@@ -8,8 +8,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     const str =
-      " \n" +
-      "CSS Part:\n" +
+      "\nCSS Part:\n" +
       ".card-sample {\n" +
       "  border-radius: 4px;\n" +
       "  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),\n" +
@@ -17,6 +16,7 @@ export default defineComponent({
       "  color: black;\n" +
       "  margin: 8px;\n" +
       "  min-width: 290px;\n" +
+      "  max-width: 400px;\n" +
       "  overflow: hidden;\n" +
       "}\n" +
       ".card-sample .image-wrapper {\n" +
@@ -44,7 +44,6 @@ export default defineComponent({
       "  padding-top: 12px;\n" +
       "  color: grey;\n" +
       "}\n" +
-      "\n" +
       ".card-sample .card-description {\n" +
       "  padding-top: 12px;\n" +
       "  font-weight: normal;\n" +
@@ -79,28 +78,35 @@ export default defineComponent({
 .page {
   display: flex;
   flex: 1;
-  flex-direction: column;
-}
-
-.content-wrapper {
   width: 100%;
-  display: flex;
   flex-direction: row;
 }
 
-.code-container {
-  margin: 30px;
-  width: 60%;
+.components-list {
+  width: 20%;
   display: flex;
   flex-direction: column;
-  padding: 50px;
-  justify-content: center;
+  padding-left: 50px;
+  padding-top: 50px;
+}
 
+.content-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  padding: 50px;
+}
+
+.code-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: lightgrey;
 }
 
 .components {
-  width: 40%;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -114,6 +120,7 @@ export default defineComponent({
   color: black;
   margin: 8px;
   min-width: 290px;
+  max-width: 400px;
   overflow: hidden;
 }
 
@@ -153,14 +160,20 @@ export default defineComponent({
 </style>
 <template>
   <div class="page">
+    <section class="components-list">
+      <li><router-link to="../components/Button">Button</router-link></li>
+      <li><router-link to="../components/Alert">Alert</router-link></li>
+      <li><router-link to="../components/Input">Input</router-link></li>
+      <li><router-link to="../components/Image">Images</router-link></li>
+    </section>
     <div class="content-wrapper">
+      <h1>Card</h1>
       <section class="code-container">
-        <h1>Card</h1>
         <pre>
         <code>
          {{str}}
         </code>
-      </pre>
+        </pre>
       </section>
       <section class="components">
         <div class="card-sample">
