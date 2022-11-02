@@ -109,9 +109,10 @@ export default defineComponent({
 .components {
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
   justify-content: center;
-  align-items: center;
+  align-items: initial;
+  width: 100%;
 }
 
 .card-sample {
@@ -122,6 +123,10 @@ export default defineComponent({
   min-width: 290px;
   max-width: 400px;
   overflow: hidden;
+}
+
+.components > .card-sample {
+  margin-left: 0px;
 }
 
 .card-sample .image-wrapper {
@@ -168,13 +173,6 @@ export default defineComponent({
     </section>
     <div class="content-wrapper">
       <h1>Card</h1>
-      <section class="code-container">
-        <pre>
-        <code>
-         {{str}}
-        </code>
-        </pre>
-      </section>
       <section class="components">
         <div class="card-sample">
           <div class="image-wrapper image-wrapper-16-9">
@@ -192,6 +190,13 @@ export default defineComponent({
             </div>
           </div>
         </div>
+      </section>
+      <section class="code-container">
+        <pre>
+        <code>
+         {{str}}
+        </code>
+        </pre>
       </section>
     </div>
   </div>
