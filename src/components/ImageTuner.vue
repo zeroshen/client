@@ -10,7 +10,7 @@ export default defineComponent({
     const imgWidth = 150;
     const imgHeight = 150;
     const imgWHRatio = 100;
-    const imgOpacity = 100;
+    const imgOpacity = 1;
     const imgBorderRadius = 0;
     const imgFit = "contain";
     const mode = "height-width";
@@ -20,7 +20,29 @@ export default defineComponent({
     const disabledH = false;
     const disabledW = false;
     const disabledRatio = true;
-    const codes = false;
+    const codes = "codes";
+    const snippet = {
+      css_title: " \nCSS Part:\n",
+      css_selector_upper: ".sample-img {\n",
+      css_bg_color: "  background-color: " + "#4e4e4e" + ";\\n",
+      css_width: "  width: " + imgWidth + "px" + ";\\n",
+    };
+    /*
+    const snippet =
+      " \n" +
+      "CSS Part:\n" +
+      ".sample-img {\n" +
+      "  background-color: #4e4e4e;\n" +
+      "  width: {{this.imgHeight}};\n" +
+      "  height: ;\n" +
+      "  object-fit: ;\n" +
+      "  opacity: ;\n" +
+      "  border-radius: ;\n" +
+      "}\n" +
+      "\n" +
+      "Vue template Part:\n" +
+      "<button>Example</button>";
+     */
     return {
       imgWidth,
       imgHeight,
@@ -36,7 +58,46 @@ export default defineComponent({
       disabledW,
       disabledRatio,
       codes,
+      snippet,
     };
+  },
+  computed: {
+    widthString(): string {
+      return this.imgWidth + "px";
+    },
+    heightString(): string {
+      return this.imgHeight + "px";
+    },
+    codeSnippet(): string {
+      return (
+        " \n" +
+        "/* css */\n" +
+        ".sample-img {\n" +
+        "  width: " +
+        this.widthString +
+        ";\n" +
+        "  height: " +
+        this.heightString +
+        ";\n" +
+        "  object-fit: " +
+        this.imgFit +
+        ";\n" +
+        "  opacity: " +
+        this.imgOpacity +
+        ";\n" +
+        "  border-radius: " +
+        this.imgBorderRadius +
+        ";\n" +
+        "}\n" +
+        "\n" +
+        "/* vue template */\n" +
+        "<img\n" +
+        "  :src=\"require('@/assets/images/books/' + filename)\"\n" +
+        "  alt='image-sample'\n" +
+        "  class='sample-img'\n" +
+        "/>"
+      );
+    },
   },
   methods: {
     toggleHW() {
@@ -73,6 +134,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
+/*css*/
 .image-tuner {
   min-width: 100%;
   height: 100%;
@@ -85,7 +147,7 @@ export default defineComponent({
   width: 50%;
 }
 
-.tuner-selections form {
+.tuner-selections .tuner-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,6 +189,18 @@ export default defineComponent({
   gap: 10px;
 }
 
+.tuner-selections .tuner-code-sample .tuner-code-titles {
+  font-weight: bold;
+}
+
+.tuner-selections .tuner-code-sample .codes-form {
+  margin-left: 25px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: orange;
+  margin-top: 10px;
+}
+
 .tuner-display {
   background-color: #fafafa;
   width: 50%;
@@ -141,7 +215,7 @@ export default defineComponent({
   width: v-bind(imgWidth + "px");
   height: v-bind(imgHeight + "px");
   object-fit: v-bind(imgFit);
-  opacity: v-bind(imgOpacity/100);
+  opacity: v-bind(imgOpacity);
   border-radius: v-bind(imgBorderRadius + "%");
   filter: v-bind(filterString);
 }
@@ -154,13 +228,75 @@ export default defineComponent({
 <template>
   <div class="image-tuner">
     <div class="tuner-selections">
-      <form>
-        <div class="tuner-mode-selector">
-          <select v-model="codes" class="tuner-mode-dropdown">
-            <option value="false">Sliders</option>
-            <option value="true">Sample Codes</option>
-          </select>
+      <div class="tuner-mode-selector">
+        <p>{{ codes }}</p>
+        <select v-model="codes" class="tuner-mode-dropdown">
+          <option value="sliders">Sliders</option>
+          <option value="codes">Sample Codes</option>
+        </select>
+      </div>
+      <div v-if="this.codes == 'codes'" class="tuner-code-sample">
+        <div class="codes-form">
+          <div class="tuner-code-titles">CSS part:</div>
+          <div class="tuner-code-tags">.sample-img {</div>
+          <div class="tuner-code-inputs">&emsp;background-color:</div>
+          <label for="width-code">&emsp;width:</label>
+          <input
+            type="number"
+            name="width-code"
+            v-model="imgWidth"
+            min="50"
+            max="400"
+            step="10"
+          />
+          <br />
+          <label for="height-code">&emsp;height:</label>
+          <input
+            type="number"
+            name="height-code"
+            v-model="imgHeight"
+            min="50"
+            max="450"
+            step="10"
+          />
+          <br />
+          <label for="object-fit-code" class="tuner-code-inputs">
+            &emsp;object-fit:
+          </label>
+          <input type="text" name="object-fit-code" v-model="imgFit" />
+          <br />
+          <label for="opacity-code" class="tuner-code-inputs"
+            >&emsp;opacity:</label
+          >
+          <input
+            type="number"
+            name="opacity-code"
+            v-model="imgOpacity"
+            min="0"
+            max="1"
+            step="0.1"
+          />
+          <br />
+          <label for="radius-code" class="tuner-code-inputs">
+            &emsp;border-radius:
+          </label>
+          <input
+            type="number"
+            name="radius-code"
+            v-model="imgBorderRadius"
+            min="0"
+            max="50"
+            step="1"
+          />
+          <div class="tuner-code-tags">}</div>
         </div>
+        <div class="codes-code">
+          <pre>
+            <code> {{ this.codeSnippet }} </code>
+          </pre>
+        </div>
+      </div>
+      <form v-else class="tuner-form">
         <div class="tuner-mode-selector">
           <p>Selected Mode: {{ mode }}</p>
           <select v-model="mode" @change="toggleHW" class="tuner-mode-dropdown">
@@ -213,11 +349,12 @@ export default defineComponent({
           />
         </div>
         <div class="tuner-sliders">
-          <label for="opacity">Opacity: {{ imgOpacity / 100 }}</label>
+          <label for="opacity">Opacity: {{ imgOpacity }}</label>
           <input
             type="range"
             min="0"
-            max="100"
+            max="1"
+            step="0.1"
             class="tuner-slider"
             name="opacity"
             v-model="imgOpacity"
