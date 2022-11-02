@@ -8,20 +8,15 @@ export default defineComponent({
     const str =
       " \n" +
       "CSS Part:\n" +
-      "button {\n" +
+      ".link {\n" +
       "  padding: 10px 20px;\n" +
-      "  border: 1px solid #ddd;\n" +
-      "  color: #333;\n" +
-      "  background-color:#fff;\n" +
-      "  border-radius: 4px;\n" +
-      "  font-size: 14px;\n" +
+      "  font-size: 27px;\n" +
       "  font-family: arail;\n" +
       "  cursor: pointer;\n" +
-      "  width: 100px;\n" +
       "}\n" +
       "\n" +
       "Vue template Part:\n" +
-      "<button>Example</button>";
+      '<router-link class="link" to="#">Example</router-link>';
     return {
       str,
     };
@@ -52,15 +47,10 @@ code {
   white-space: pre;
   background-color: lightgrey;
 }
-button {
+.link {
   padding: 10px 20px;
-  border: 1px solid #ddd;
-  color: #333;
-  background-color: #fff;
-  border-radius: 4px;
-  font-size: 14px;
+  font-size: 27px;
   font-family: arail;
-  width: 100px;
   cursor: pointer;
 }
 .components {
@@ -87,7 +77,7 @@ button {
         </code>
       </pre>
       <section class="components">
-        <router-link to="#">Example</router-link>
+        <router-link class="link" to="#">Example</router-link>
       </section>
     </section>
   </div>
