@@ -12,6 +12,7 @@ import CardTuner from "@/components/CardTuner.vue";
 import ComponentsSpinnerView from "@/views/ComponentsSpinnerView.vue";
 import ComponentsNavBarView from "@/views/ComponentsNavBarView.vue";
 import GridComponentView from "@/components/GridTuner.vue";
+import ComponentsPopOverView from "@/views/ComponentsPopOverView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -66,6 +67,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/NavBar",
     name: "components-navbar-view",
     component: ComponentsNavBarView,
+    props: true,
+  },
+  {
+    path: "/components/PopOver",
+    name: "components-pop-over-view",
+    component: ComponentsPopOverView,
     props: true,
   },
   {
