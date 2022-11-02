@@ -8,20 +8,20 @@ export default defineComponent({
     const str =
       " \n" +
       "CSS Part:\n" +
-      "button {\n" +
-      "  padding: 10px 20px;\n" +
-      "  border: 1px solid #ddd;\n" +
-      "  color: #333;\n" +
-      "  background-color:#fff;\n" +
-      "  border-radius: 4px;\n" +
-      "  font-size: 14px;\n" +
-      "  font-family: arail;\n" +
-      "  cursor: pointer;\n" +
-      "  width: 100px;\n" +
+      ".alert {\n" +
+      "  padding: 1em;\n" +
+      "  padding-right: 2em;\n" +
+      "  margin-bottom: 1em;\n" +
+      "  background: lightgreen;\n" +
+      "  border: 2px solid;\n" +
+      "  position: relative;\n" +
+      "  border-radius: 5px;\n" +
       "}\n" +
       "\n" +
       "Vue template Part:\n" +
-      "<button>Example</button>";
+      '<div class="alert">\n' +
+      "     <strong>Success!</strong> You could add some transitions later.\n" +
+      "</div>";
     return {
       str,
     };
@@ -52,17 +52,16 @@ code {
   white-space: pre;
   background-color: lightgrey;
 }
-button {
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  color: #333;
-  background-color: #fff;
-  border-radius: 4px;
-  font-size: 14px;
-  font-family: arail;
-  width: 100px;
-  cursor: pointer;
+.alert {
+  padding: 1em;
+  padding-right: 2em;
+  margin-bottom: 1em;
+  background: lightgreen;
+  border: 2px solid;
+  position: relative;
+  border-radius: 5px;
 }
+
 .components {
   width: 80%;
   display: flex;
@@ -87,7 +86,9 @@ button {
         </code>
       </pre>
       <section class="components">
-        <button>Example</button>
+        <div class="alert">
+          <strong>Success!</strong> You could add some transitions later.
+        </div>
       </section>
     </section>
   </div>
