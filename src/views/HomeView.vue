@@ -28,8 +28,8 @@ import NavList from "@/components/NavList.vue";
 <template>
   <div class="home-page">
     <section class="components-list">
-      <div>View the components.</div>
-      <NavList></NavList>
+      <div>View the components:</div>
+      <NavList style="padding-left: 0px; padding-top: 0px"></NavList>
     </section>
     <section class="game-button-container">
       <router-link to="../components/Level1">
