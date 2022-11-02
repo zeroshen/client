@@ -8,6 +8,7 @@ import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
 import ComponentsInputView from "@/views/ComponentsInputView.vue";
 import ComponentsLevelOneView from "@/views/ComponentsLevelOneView.vue";
 import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
+import ComponentsSpinnerView from "@/views/ComponentsSpinnerView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -50,6 +51,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/Link",
     name: "components-link-view",
     component: ComponentsLinkView,
+    props: true,
+  },
+  {
+    path: "/components/Spinner",
+    name: "components-spinner-view",
+    component: ComponentsSpinnerView,
     props: true,
   },
   {
