@@ -4,6 +4,9 @@ import HomeView from "@/views/HomeView.vue";
 //import ComponentsView from "@/views/ComponentsView.vue";
 import ImageTuner from "@/components/ImageTuner.vue";
 import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
+import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
+import ComponentsInputView from "@/views/ComponentsInputView.vue";
+import ComponentsLevelOneView from "@/views/ComponentsLevelOneView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,11 +20,29 @@ const routes: Array<RouteRecordRaw> = [
     component: GameView,
     props: true,
   },
+  {
+    path: "/components/Level1",
+    name: "components-level-1-view",
+    component: ComponentsLevelOneView,
+    props: true,
+  },
   /*Hard code need change later!*/
   {
     path: "/components/Button",
     name: "components-button-view",
     component: ComponentsButtonView,
+    props: true,
+  },
+  {
+    path: "/components/Alert",
+    name: "components-alert-view",
+    component: ComponentsAlertView,
+    props: true,
+  },
+  {
+    path: "/components/Input",
+    name: "components-input-view",
+    component: ComponentsInputView,
     props: true,
   },
   {
