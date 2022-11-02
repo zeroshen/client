@@ -9,7 +9,6 @@ const categoryList: CategoryItem[] = [
   { categoryId: 1003, name: "Mystery" },
   { categoryId: 1004, name: "Romance" },
 ];
-import NavList from "@/components/NavList.vue";
 provide("categoryList", categoryList);
 </script>
 
@@ -32,7 +31,6 @@ provide("categoryList", categoryList);
   <div id="app">
     <app-header></app-header>
     <div class="contents">
-      <nav-list></nav-list>
       <router-view></router-view>
     </div>
     <app-footer></app-footer>

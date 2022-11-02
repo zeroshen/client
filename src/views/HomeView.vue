@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NavList from "@/components/NavList.vue";
+</script>
 
 <style scoped>
 .home-page {
@@ -27,17 +29,7 @@
   <div class="home-page">
     <section class="components-list">
       <div>View the components.</div>
-      <li><router-link to="../components/Button">Button</router-link></li>
-      <li><router-link to="../components/Alert">Alert</router-link></li>
-      <li><router-link to="../components/Input">Input</router-link></li>
-      <li><router-link to="../components/Link">Link</router-link></li>
-      <li><router-link to="../components/Spinner">Spinner</router-link></li>
-      <li><router-link to="../components/NavBar">NavBar</router-link></li>
-      <li>
-        <router-link to="../components/PopOver">PopOver</router-link>
-      </li>
-      <li><router-link to="../components/Image">Images</router-link></li>
-      <li><router-link to="../components/Card">Card</router-link></li>
+      <NavList></NavList>
     </section>
     <section class="game-button-container">
       <router-link to="../components/Level1">

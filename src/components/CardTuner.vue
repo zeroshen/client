@@ -1,11 +1,10 @@
 <script setup lang="ts">
 const filename = "little-dorrit.gif";
-import NavList from "@/components/NavList";
 </script>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-
+import NavList from "@/components/NavList.vue";
 export default defineComponent({
   data() {
     const str =
@@ -157,6 +156,7 @@ export default defineComponent({
 </style>
 <template>
   <div class="page">
+    <NavList></NavList>
     <div class="content-wrapper">
       <h1>Card</h1>
       <section class="components">
