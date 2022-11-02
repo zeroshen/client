@@ -33,7 +33,9 @@
       <li><router-link to="../components/Image">Images</router-link></li>
     </section>
     <section class="game-button-container">
-      <div class="button">Start the Game!</div>
+      <router-link to="../components/Level1">
+        <div class="button">Start the Game!</div>
+      </router-link>
     </section>
   </div>
 </template>

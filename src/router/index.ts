@@ -6,6 +6,7 @@ import ImageTuner from "@/components/ImageTuner.vue";
 import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
 import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
 import ComponentsInputView from "@/views/ComponentsInputView.vue";
+import ComponentsLevelOneView from "@/views/ComponentsLevelOneView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,6 +18,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/:name",
     name: "games-view",
     component: GameView,
+    props: true,
+  },
+  {
+    path: "/components/Level1",
+    name: "components-level-1-view",
+    component: ComponentsLevelOneView,
     props: true,
   },
   /*Hard code need change later!*/
