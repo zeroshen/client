@@ -39,10 +39,6 @@ export default defineComponent({
 .page {
   display: flex;
 }
-.components-list {
-  width: 20%;
-  display: flex;
-}
 .code-container {
   width: 80%;
   display: flex;
@@ -71,9 +67,7 @@ lable {
 </style>
 <template>
   <div class="page">
-    <section class="components-list">
-      <NavList></NavList>
-    </section>
+    <NavList></NavList>
     <section class="code-container">
       <h1>Input</h1>
       <section class="components">

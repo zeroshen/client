@@ -157,6 +157,7 @@ export default defineComponent({
 </style>
 <template>
   <div class="page">
+    <NavList></NavList>
     <div class="content-wrapper">
       <h1>Card</h1>
       <section class="components">
