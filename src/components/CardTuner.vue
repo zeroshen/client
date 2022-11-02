@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const filename = "little-dorrit.gif";
+import NavList from "@/components/NavList";
 </script>
 
 <script lang="ts">
@@ -77,21 +78,12 @@ export default defineComponent({
 <style scoped>
 .page {
   display: flex;
-  flex: 1;
   width: 100%;
   flex-direction: row;
 }
 
-.components-list {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  padding-left: 50px;
-  padding-top: 50px;
-}
-
 .content-wrapper {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: initial;
@@ -165,12 +157,6 @@ export default defineComponent({
 </style>
 <template>
   <div class="page">
-    <section class="components-list">
-      <li><router-link to="../components/Button">Button</router-link></li>
-      <li><router-link to="../components/Alert">Alert</router-link></li>
-      <li><router-link to="../components/Input">Input</router-link></li>
-      <li><router-link to="../components/Image">Images</router-link></li>
-    </section>
     <div class="content-wrapper">
       <h1>Card</h1>
       <section class="components">

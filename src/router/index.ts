@@ -11,6 +11,7 @@ import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
 import CardTuner from "@/components/CardTuner.vue";
 import ComponentsSpinnerView from "@/views/ComponentsSpinnerView.vue";
 import ComponentsNavBarView from "@/views/ComponentsNavBarView.vue";
+import GridComponentView from "@/components/GridTuner.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -77,6 +78,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/card",
     name: "components-card-view",
     component: CardTuner,
+    props: true,
+  },
+  {
+    path: "/components/grid",
+    name: "grid-tuner",
+    component: GridComponentView,
     props: true,
   },
 ];

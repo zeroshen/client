@@ -9,6 +9,7 @@ const categoryList: CategoryItem[] = [
   { categoryId: 1003, name: "Mystery" },
   { categoryId: 1004, name: "Romance" },
 ];
+import NavList from "@/components/NavList.vue";
 provide("categoryList", categoryList);
 </script>
 
@@ -18,12 +19,22 @@ provide("categoryList", categoryList);
   flex-direction: column;
   min-height: 100vh;
 }
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+  flex: 1;
+}
 </style>
 
 <template>
   <div id="app">
     <app-header></app-header>
-    <router-view></router-view>
+    <div class="contents">
+      <nav-list></nav-list>
+      <router-view></router-view>
+    </div>
     <app-footer></app-footer>
   </div>
 </template>
