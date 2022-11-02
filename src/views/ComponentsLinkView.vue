@@ -71,6 +71,7 @@ code {
       <li><router-link to="../components/Image">Images</router-link></li>
     </section>
     <section class="code-container">
+      <h1>Link</h1>
       <pre>
         <code>
          {{str}}
