@@ -10,18 +10,64 @@ export default defineComponent({
     const str =
       " \n" +
       "CSS Part:\n" +
-      ".alert {\n" +
-      "  padding: 1em;\n" +
-      "  padding-right: 2em;\n" +
-      "  margin-bottom: 1em;\n" +
-      "  background: lightgreen;\n" +
-      "  border: 2px solid;\n" +
+      ".card-sample {\n" +
+      "  border-radius: 4px;\n" +
+      "  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),\n" +
+      "    0 6px 20px 0 rgba(0, 0, 0, 0.19);\n" +
+      "  color: black;\n" +
+      "  margin: 8px;\n" +
+      "  min-width: 290px;\n" +
+      "  overflow: hidden;\n" +
+      "}\n" +
+      ".card-sample .image-wrapper {\n" +
       "  position: relative;\n" +
-      "  border-radius: 5px;\n" +
+      "}\n" +
+      ".image-wrapper-16-9 {\n" +
+      "  height: 0px;\n" +
+      "  overflow: hidden;\n" +
+      "  padding-bottom: 56.25%;\n" +
+      "}\n" +
+      ".image-wrapper-16-9 > img {\n" +
+      "  width: 100%;\n" +
+      "  height: auto;\n" +
+      "}\n" +
+      ".card-sample .card-texts {\n" +
+      "  padding: 1rem;\n" +
+      "}\n" +
+      "\n" +
+      ".card-sample .card-title {\n" +
+      "  font-weight: bold;\n" +
+      "  font-size: 2rem;\n" +
+      "}\n" +
+      "\n" +
+      ".card-sample .card-sub-title {\n" +
+      "  padding-top: 12px;\n" +
+      "  color: grey;\n" +
+      "}\n" +
+      "\n" +
+      ".card-sample .card-description {\n" +
+      "  padding-top: 12px;\n" +
+      "  font-weight: normal;\n" +
+      "  font-size: 1rem;\n" +
       "}\n" +
       "\n" +
       "Vue template Part:\n" +
-      '<div class="alert">\n' +
+      '<div class="card-sample">\n' +
+      '  <div class="image-wrapper image-wrapper-16-9">\n' +
+      "    <img\n" +
+      '      class="card-image"\n' +
+      "      :src=\"require('@/assets/images/books/' + filename)\"\n" +
+      '      alt="card-image-sample"\n' +
+      "    />\n" +
+      "  </div>\n" +
+      '    <div class="card-texts">\n' +
+      '      <div class="card-title">tortor id ipsum</div>\n' +
+      '         <div class="card-sub-title">ipsum lorem</div>\n' +
+      '         <div class="card-description">\n' +
+      "           Lorem ipsum dolor sit amet, \n" +
+      "           consectetur adipiscing elit.\n" +
+      "         </div>\n" +
+      "    </div>\n" +
       "</div>";
     return {
       str,
@@ -32,17 +78,29 @@ export default defineComponent({
 <style scoped>
 .page {
   display: flex;
+  flex: 1;
+  flex-direction: column;
 }
-.code-container {
-  width: 50%;
+
+.content-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: row;
+}
+
+.code-container {
+  margin: 30px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
   padding: 50px;
   justify-content: center;
+
+  background-color: lightgrey;
 }
 
 .components {
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -50,9 +108,7 @@ export default defineComponent({
   align-items: center;
 }
 
-.components .card-sample {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+.card-sample {
   border-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: black;
@@ -61,7 +117,7 @@ export default defineComponent({
   overflow: hidden;
 }
 
-.components .image-wrapper {
+.card-sample .image-wrapper {
   position: relative;
 }
 
@@ -79,17 +135,17 @@ export default defineComponent({
   padding: 1rem;
 }
 
-.components .card-title {
+.card-sample .card-title {
   font-weight: bold;
   font-size: 2rem;
 }
 
-.components .card-sub-title {
+.card-sample .card-sub-title {
   padding-top: 12px;
   color: grey;
 }
 
-.components .card-description {
+.card-sample .card-description {
   padding-top: 12px;
   font-weight: normal;
   font-size: 1rem;
@@ -97,30 +153,33 @@ export default defineComponent({
 </style>
 <template>
   <div class="page">
-    <section class="code-container">
-      <pre>
+    <div class="content-wrapper">
+      <section class="code-container">
+        <h1>Card</h1>
+        <pre>
         <code>
          {{str}}
         </code>
       </pre>
-    </section>
-    <section class="components">
-      <div class="card-sample">
-        <div class="image-wrapper image-wrapper-16-9">
-          <img
-            class="card-image"
-            :src="require('@/assets/images/books/' + filename)"
-            alt="card-image-sample"
-          />
-        </div>
-        <div class="card-texts">
-          <div class="card-title">tortor id ipsum</div>
-          <div class="card-sub-title">ipsum lorem</div>
-          <div class="card-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </section>
+      <section class="components">
+        <div class="card-sample">
+          <div class="image-wrapper image-wrapper-16-9">
+            <img
+              class="card-image"
+              :src="require('@/assets/images/books/' + filename)"
+              alt="card-image-sample"
+            />
+          </div>
+          <div class="card-texts">
+            <div class="card-title">tortor id ipsum</div>
+            <div class="card-sub-title">ipsum lorem</div>
+            <div class="card-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
