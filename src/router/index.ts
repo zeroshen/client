@@ -8,6 +8,7 @@ import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
 import ComponentsInputView from "@/views/ComponentsInputView.vue";
 import ComponentsLevelOneView from "@/views/ComponentsLevelOneView.vue";
 import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
+import CardTuner from "@/components/CardTuner.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -56,6 +57,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/image",
     name: "components-image-view",
     component: ImageTuner,
+    props: true,
+  },
+  {
+    path: "/components/card",
+    name: "components-card-view",
+    component: CardTuner,
     props: true,
   },
 ];
