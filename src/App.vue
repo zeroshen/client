@@ -1,15 +1,6 @@
 <script setup lang="ts">
-import { provide } from "vue";
-import { CategoryItem } from "@/types";
 import AppHeader from "@/components/AppHeader.vue";
 import AppFooter from "@/components/AppFooter.vue";
-const categoryList: CategoryItem[] = [
-  { categoryId: 1001, name: "Classics" },
-  { categoryId: 1002, name: "Fantasy" },
-  { categoryId: 1003, name: "Mystery" },
-  { categoryId: 1004, name: "Romance" },
-];
-provide("categoryList", categoryList);
 </script>
 
 <style>
@@ -18,21 +9,12 @@ provide("categoryList", categoryList);
   flex-direction: column;
   min-height: 100vh;
 }
-
-.contents {
-  display: flex;
-  flex-direction: row;
-  min-height: 100%;
-  flex: 1;
-}
 </style>
 
 <template>
   <div id="app">
     <app-header></app-header>
-    <div class="contents">
-      <router-view></router-view>
-    </div>
+    <router-view></router-view>
     <app-footer></app-footer>
   </div>
 </template>

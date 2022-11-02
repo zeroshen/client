@@ -2,8 +2,10 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import NavList from "@/components/NavList.vue";
 
 export default defineComponent({
+  components: { NavList },
   data() {
     const str =
       " \n" +
@@ -37,13 +39,6 @@ export default defineComponent({
 .page {
   display: flex;
 }
-.components-list {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 50px;
-}
 .code-container {
   width: 80%;
   display: flex;
@@ -67,29 +62,14 @@ lable {
   font-weight: bold;
 }
 .components {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
+  padding-top: 20px;
 }
 </style>
 <template>
   <div class="page">
-    <section class="components-list">
-      <li><router-link to="../components/Button">Button</router-link></li>
-      <li><router-link to="../components/Alert">Alert</router-link></li>
-      <li><router-link to="../components/Inputs">Inputs</router-link></li>
-      <li><router-link to="../components/Image">Images</router-link></li>
-    </section>
+    <NavList></NavList>
     <section class="code-container">
       <h1>Input</h1>
-      <pre>
-        <code>
-         {{str}}
-        </code>
-      </pre>
       <section class="components">
         <lable for="subject">Content：</lable>
         <input
@@ -100,6 +80,11 @@ lable {
           required
         />
       </section>
+      <pre>
+        <code>
+         {{str}}
+        </code>
+      </pre>
     </section>
   </div>
 </template>
