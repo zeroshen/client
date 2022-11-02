@@ -9,6 +9,7 @@ import ComponentsInputView from "@/views/ComponentsInputView.vue";
 import ComponentsLevelOneView from "@/views/ComponentsLevelOneView.vue";
 import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
 import ComponentsSpinnerView from "@/views/ComponentsSpinnerView.vue";
+import ComponentsNavBarView from "@/views/ComponentsNavBarView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -57,6 +58,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/Spinner",
     name: "components-spinner-view",
     component: ComponentsSpinnerView,
+    props: true,
+  },
+  {
+    path: "/components/NavBar",
+    name: "components-navbar-view",
+    component: ComponentsNavBarView,
     props: true,
   },
   {

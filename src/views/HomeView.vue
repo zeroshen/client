@@ -32,6 +32,7 @@
       <li><router-link to="../components/Input">Input</router-link></li>
       <li><router-link to="../components/Link">Link</router-link></li>
       <li><router-link to="../components/Spinner">Spinner</router-link></li>
+      <li><router-link to="../components/NavBar">NavBar</router-link></li>
       <li><router-link to="../components/Image">Images</router-link></li>
     </section>
     <section class="game-button-container">
