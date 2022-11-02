@@ -11,6 +11,6 @@ footer {
 
 <template>
   <footer class="container">
-    <div>hello</div>
+    <div></div>
   </footer>
 </template>

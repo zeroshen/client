@@ -87,7 +87,7 @@ button {
         </code>
       </pre>
       <section class="components">
-        <button>Example</button>
+        <router-link to="#">Example</router-link>
       </section>
     </section>
   </div>

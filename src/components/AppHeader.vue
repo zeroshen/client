@@ -19,6 +19,6 @@ header {
 
 <template>
   <header class="container">
-    <div>Hello</div>
+    <div></div>
   </header>
 </template>
