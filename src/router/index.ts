@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import GameView from "@/views/GamesView.vue";
 import HomeView from "@/views/HomeView.vue";
-import ComponentsView from "@/views/ComponentsView.vue";
+//import ComponentsView from "@/views/ComponentsView.vue";
 import ImageTuner from "@/components/ImageTuner.vue";
 import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
 

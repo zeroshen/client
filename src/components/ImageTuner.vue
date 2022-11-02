@@ -10,20 +10,32 @@ export default defineComponent({
     const imgWidth = 150;
     const imgHeight = 150;
     const imgWHRatio = 100;
+    const imgOpacity = 100;
+    const imgBorderRadius = 0;
     const imgFit = "contain";
     const mode = "height-width";
+    const filter = {};
+    const filterString = "";
+    const filterMode = "";
     const disabledH = false;
     const disabledW = false;
     const disabledRatio = true;
+    const codes = false;
     return {
       imgWidth,
       imgHeight,
       imgWHRatio,
+      imgOpacity,
+      imgBorderRadius,
       imgFit,
       mode,
+      filter,
+      filterString,
+      filterMode,
       disabledH,
       disabledW,
       disabledRatio,
+      codes,
     };
   },
   methods: {
@@ -51,6 +63,10 @@ export default defineComponent({
       } else if (this.mode == "width") {
         this.imgHeight = Math.round((100 * this.imgWidth) / this.imgWHRatio);
       }
+    },
+    clearFilterMode() {
+      this.filter = "";
+      this.filterMode = "";
     },
   },
 });
@@ -89,9 +105,20 @@ export default defineComponent({
   min-width: 80%;
 }
 
+.tuner-selections .tuner-mode-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tuner-selections .tuner-mode-selector .tuner-mode-dropdown {
+  min-width: 50%;
+}
+
 .tuner-selections .tuner-radio {
   display: flex;
   flex-direction: column;
+  width: 50%;
 }
 
 .tuner-selections .tuner-radio .tuner-image-fit {
@@ -114,6 +141,9 @@ export default defineComponent({
   width: v-bind(imgWidth + "px");
   height: v-bind(imgHeight + "px");
   object-fit: v-bind(imgFit);
+  opacity: v-bind(imgOpacity/100);
+  border-radius: v-bind(imgBorderRadius + "%");
+  filter: v-bind(filterString);
 }
 
 .tuner-display .img-auto {
@@ -126,8 +156,14 @@ export default defineComponent({
     <div class="tuner-selections">
       <form>
         <div class="tuner-mode-selector">
-          Selected Mode: {{ mode }} <br />
-          <select v-model="mode" @change="toggleHW">
+          <select v-model="codes" class="tuner-mode-dropdown">
+            <option value="false">Sliders</option>
+            <option value="true">Sample Codes</option>
+          </select>
+        </div>
+        <div class="tuner-mode-selector">
+          <p>Selected Mode: {{ mode }}</p>
+          <select v-model="mode" @change="toggleHW" class="tuner-mode-dropdown">
             <option value="height-width">Width & Height</option>
             <option value="auto">Auto Height</option>
             <optgroup label="Ratio Baseline">
@@ -176,6 +212,30 @@ export default defineComponent({
             @change="onHWChangeRatio"
           />
         </div>
+        <div class="tuner-sliders">
+          <label for="opacity">Opacity: {{ imgOpacity / 100 }}</label>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            class="tuner-slider"
+            name="opacity"
+            v-model="imgOpacity"
+          />
+        </div>
+        <div class="tuner-sliders">
+          <label for="border-radius"
+            >Border Radius: {{ imgBorderRadius }}%</label
+          >
+          <input
+            type="range"
+            min="0"
+            max="50"
+            class="tuner-slider"
+            name="border-radius"
+            v-model="imgBorderRadius"
+          />
+        </div>
         <div class="tuner-radio">
           <p>Please select image fit type</p>
           <div class="tuner-image-fit">
@@ -202,6 +262,43 @@ export default defineComponent({
               value="scale-down"
             />
             <label for="scale-down">scale-down</label>
+          </div>
+        </div>
+        <div class="tuner-radio">
+          <div class="filter-mode-header">
+            <p>Please select image filter</p>
+            <button @click="clearFilterMode">RESET</button>
+          </div>
+          <div class="tuner-image-fit">
+            <input type="radio" id="blur" v-model="filterMode" value="blur" />
+            <label for="blur">blur</label>
+          </div>
+          <div class="tuner-image-fit">
+            <input
+              type="radio"
+              id="brightness"
+              v-model="filterMode"
+              value="brightness"
+            />
+            <label for="brightness">brightness</label>
+          </div>
+          <div class="tuner-image-fit">
+            <input
+              type="radio"
+              id="contrast"
+              v-model="filterMode"
+              value="contrast"
+            />
+            <label for="contrast">contrast</label>
+          </div>
+          <div class="tuner-image-fit">
+            <input
+              type="radio"
+              id="grayscale"
+              v-model="filterMode"
+              value="grayscale"
+            />
+            <label for="grayscale">grayscale</label>
           </div>
         </div>
       </form>
