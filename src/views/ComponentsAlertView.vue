@@ -80,6 +80,7 @@ code {
       <li><router-link to="../components/Image">Images</router-link></li>
     </section>
     <section class="code-container">
+      <h1>Alert</h1>
       <pre>
         <code>
          {{str}}

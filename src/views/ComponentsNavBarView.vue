@@ -8,20 +8,35 @@ export default defineComponent({
     const str =
       " \n" +
       "CSS Part:\n" +
-      "button {\n" +
-      "  padding: 10px 20px;\n" +
-      "  border: 1px solid #ddd;\n" +
-      "  color: #333;\n" +
-      "  background-color:#fff;\n" +
-      "  border-radius: 4px;\n" +
-      "  font-size: 14px;\n" +
-      "  font-family: arail;\n" +
+      "bnav {\n" +
+      "  width: 100%;\n" +
+      "  color: #bbb;\n" +
+      "  background: #2e2e2e;\n" +
+      "  font-weight: bold;\n" +
+      "  letter-spacing: 0.025em;\n" +
+      "}\n" +
+      "nav ul {\n" +
+      "  text-align: center;\n" +
+      "  margin: 0;\n" +
+      "}\n" +
+      "nav ul li {\n" +
+      "  display: inline-block;\n" +
+      "  padding: 0 3em;\n" +
+      "  line-height: 3em;\n" +
+      "}\n" +
+      "nav ul li:hover {\n" +
+      "  background: #00939c;\n" +
       "  cursor: pointer;\n" +
-      "  width: 100px;\n" +
       "}\n" +
       "\n" +
       "Vue template Part:\n" +
-      "<button>Example</button>";
+      '<nav id="navbar">\n' +
+      "    <ul>\n" +
+      "       <li>One</li>\n" +
+      "       <li>Two</li>\n" +
+      "       <li>Three</li>\n" +
+      "    </ul>\n" +
+      "</nav>";
     return {
       str,
     };
@@ -52,15 +67,24 @@ code {
   white-space: pre;
   background-color: lightgrey;
 }
-button {
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  color: #333;
-  background-color: #fff;
-  border-radius: 4px;
-  font-size: 14px;
-  font-family: arail;
-  width: 100px;
+nav {
+  width: 100%;
+  color: #bbb;
+  background: #2e2e2e;
+  font-weight: bold;
+  letter-spacing: 0.025em;
+}
+nav ul {
+  text-align: center;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  padding: 0 3em;
+  line-height: 3em;
+}
+nav ul li:hover {
+  background: #00939c;
   cursor: pointer;
 }
 .components {
@@ -81,14 +105,20 @@ button {
       <li><router-link to="../components/Image">Images</router-link></li>
     </section>
     <section class="code-container">
-      <h1>Button</h1>
+      <h1>NavBar</h1>
       <pre>
         <code>
          {{str}}
         </code>
       </pre>
       <section class="components">
-        <button>Example</button>
+        <nav id="navbar">
+          <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+          </ul>
+        </nav>
       </section>
     </section>
   </div>
