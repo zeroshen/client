@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const filename = "little-dorrit.gif";
+import NavList from "@/components/NavList.vue";
 </script>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import NavList from "@/components/NavList.vue";
 export default defineComponent({
   data() {
     const str =

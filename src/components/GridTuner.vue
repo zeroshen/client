@@ -53,20 +53,37 @@ export default defineComponent({
   justify-content: center;
   background-color: lightgrey;
 }
+.components {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 0px;
+  justify-content: center;
+  align-items: initial;
+  width: 100%;
+}
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  padding: 50px;
+}
 </style>
 <template>
-  <section class="page">
+  <div class="page">
     <NavLink></NavLink>
-    <div class="sample-codes">
+    <div class="content-wrapper">
       <h1>Grid</h1>
-      <div class="grid-container">
-        <SampleCard class="grid-item"></SampleCard>
-        <SampleCard class="grid-item"></SampleCard>
-        <SampleCard class="grid-item"></SampleCard>
-        <SampleCard class="grid-item"></SampleCard>
-        <SampleCard class="grid-item"></SampleCard>
-        <SampleCard class="grid-item"></SampleCard>
-      </div>
+      <section class="components">
+        <div class="grid-container">
+          <SampleCard class="grid-item"></SampleCard>
+          <SampleCard class="grid-item"></SampleCard>
+          <SampleCard class="grid-item"></SampleCard>
+          <SampleCard class="grid-item"></SampleCard>
+          <SampleCard class="grid-item"></SampleCard>
+          <SampleCard class="grid-item"></SampleCard>
+        </div>
+      </section>
       <section class="code-container">
         <pre>
         <code>
@@ -75,5 +92,5 @@ export default defineComponent({
         </pre>
       </section>
     </div>
-  </section>
+  </div>
 </template>
