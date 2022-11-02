@@ -7,6 +7,7 @@ import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
 import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
 import ComponentsInputView from "@/views/ComponentsInputView.vue";
 import ComponentsLevelOneView from "@/views/ComponentsLevelOneView.vue";
+import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -43,6 +44,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/Input",
     name: "components-input-view",
     component: ComponentsInputView,
+    props: true,
+  },
+  {
+    path: "/components/Link",
+    name: "components-link-view",
+    component: ComponentsLinkView,
     props: true,
   },
   {
