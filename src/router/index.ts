@@ -4,6 +4,7 @@ import HomeView from "@/views/HomeView.vue";
 import ComponentsView from "@/views/ComponentsView.vue";
 import ImageTuner from "@/components/ImageTuner.vue";
 import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
+import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -22,6 +23,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/Button",
     name: "components-button-view",
     component: ComponentsButtonView,
+    props: true,
+  },
+  {
+    path: "/components/Alert",
+    name: "components-alert-view",
+    component: ComponentsAlertView,
     props: true,
   },
   {
