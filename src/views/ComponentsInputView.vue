@@ -8,20 +8,25 @@ export default defineComponent({
     const str =
       " \n" +
       "CSS Part:\n" +
-      "button {\n" +
-      "  padding: 10px 20px;\n" +
-      "  border: 1px solid #ddd;\n" +
-      "  color: #333;\n" +
-      "  background-color:#fff;\n" +
-      "  border-radius: 4px;\n" +
-      "  font-size: 14px;\n" +
-      "  font-family: arail;\n" +
-      "  cursor: pointer;\n" +
-      "  width: 100px;\n" +
+      "textarea {\n" +
+      "  resize: none;\n" +
+      "  overflow: hidden;\n" +
+      "  width: 100%;\n" +
+      "  min-height: 50px;\n" +
+      "}\n" +
+      "lable {\n" +
+      "  font-weight: bold;\n" +
       "}\n" +
       "\n" +
       "Vue template Part:\n" +
-      "<button>Example</button>";
+      '<lable for="subject">Content：</lable>\n' +
+      "<input\n" +
+      '   type="text"\n' +
+      '   id="subject"\n' +
+      '   class="form-control"\n' +
+      '   placeholder="Content..."\n' +
+      "   required\n" +
+      "/>";
     return {
       str,
     };
@@ -52,21 +57,19 @@ code {
   white-space: pre;
   background-color: lightgrey;
 }
-button {
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  color: #333;
-  background-color: #fff;
-  border-radius: 4px;
-  font-size: 14px;
-  font-family: arail;
-  width: 100px;
-  cursor: pointer;
+textarea {
+  resize: none;
+  overflow: hidden;
+  width: 100%;
+  min-height: 50px;
+}
+lable {
+  font-weight: bold;
 }
 .components {
   width: 80%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 10px;
   justify-content: center;
   align-items: center;
@@ -87,7 +90,14 @@ button {
         </code>
       </pre>
       <section class="components">
-        <button>Example</button>
+        <lable for="subject">Content：</lable>
+        <input
+          type="text"
+          id="subject"
+          class="form-control"
+          placeholder="Content..."
+          required
+        />
       </section>
     </section>
   </div>

@@ -77,7 +77,7 @@ button {
     <section class="components-list">
       <li><router-link to="../components/Button">Button</router-link></li>
       <li><router-link to="../components/Alert">Alert</router-link></li>
-      <li><router-link to="../components/Inputs">Inputs</router-link></li>
+      <li><router-link to="../components/Input">Input</router-link></li>
       <li><router-link to="../components/Image">Images</router-link></li>
     </section>
     <section class="code-container">
