@@ -140,10 +140,11 @@ export default defineComponent({
   display: flex;
   flex-direction: row;
   width: 100%;
+  flex: 1;
 }
 .image-tuner {
   min-width: 80%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: row;
   flex: 1;
@@ -203,8 +204,9 @@ export default defineComponent({
   margin-left: 25px;
   border-width: 1px;
   border-style: solid;
-  border-color: orange;
+  border-color: #00939c;
   margin-top: 10px;
+  padding: 5px;
 }
 
 .tuner-display {
