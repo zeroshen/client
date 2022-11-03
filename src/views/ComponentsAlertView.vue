@@ -18,10 +18,14 @@ export default defineComponent({
       "  border-radius: 5px;\n" +
       "  color: white;\n" +
       "}\n" +
+      ".alert i {\n" +
+      "  padding-right: 1rem;\n" +
+      "}\n" +
       "\n" +
       "Vue template Part:\n" +
       '<div class="alert">\n' +
-      "     <strong>Success!</strong> You could add some transitions later.\n" +
+      '  <i class="fa-solid fa-circle-check"></i><strong>Success!</strong>\n' +
+      "  You could add some transitions later.\n" +
       "</div>";
     return {
       str,
