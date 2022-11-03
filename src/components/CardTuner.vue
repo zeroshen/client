@@ -108,7 +108,8 @@ export default defineComponent({
 
 .card-sample {
   border-radius: 4px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-color: #333333;
+  border-width: 0.5px;
   color: black;
   margin: 8px;
   min-width: 290px;

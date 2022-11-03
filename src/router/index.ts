@@ -13,6 +13,8 @@ import ComponentsSpinnerView from "@/views/ComponentsSpinnerView.vue";
 import ComponentsNavBarView from "@/views/ComponentsNavBarView.vue";
 import GridComponentView from "@/components/GridTuner.vue";
 import ComponentsPopOverView from "@/views/ComponentsPopOverView.vue";
+import AudioPlayerTuner from "@/components/AudioPlayerTuner.vue";
+import VideoPlayerTuner from "@/components/VideoPlayerTuner.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -91,6 +93,18 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/grid",
     name: "grid-tuner",
     component: GridComponentView,
+    props: true,
+  },
+  {
+    path: "/components/audio",
+    name: "audio-player-tuner",
+    component: AudioPlayerTuner,
+    props: true,
+  },
+  {
+    path: "/components/video",
+    name: "video-player-tuner",
+    component: VideoPlayerTuner,
     props: true,
   },
 ];
