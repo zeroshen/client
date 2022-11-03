@@ -11,13 +11,12 @@ export default defineComponent({
       " \n" +
       "CSS Part:\n" +
       ".alert {\n" +
-      "  padding: 1em;\n" +
-      "  padding-right: 2em;\n" +
+      "  padding: 1em 2em 1em 1em;\n" +
       "  margin-bottom: 1em;\n" +
-      "  background: lightgreen;\n" +
-      "  border: 2px solid;\n" +
+      "  background: #67ad5c;\n" +
       "  position: relative;\n" +
       "  border-radius: 5px;\n" +
+      "  color: white;\n" +
       "}\n" +
       "\n" +
       "Vue template Part:\n" +
@@ -48,17 +47,21 @@ code {
   background-color: lightgrey;
 }
 .alert {
-  padding: 1em;
-  padding-right: 2em;
+  padding: 1em 2em 1em 1em;
   margin-bottom: 1em;
-  background: lightgreen;
-  border: 2px solid;
+  background: #67ad5c;
   position: relative;
   border-radius: 5px;
+  color: white;
+  max-width: 550px;
 }
 
 .components {
   padding-top: 30px;
+}
+
+.alert i {
+  padding-right: 1rem;
 }
 </style>
 <template>
@@ -68,7 +71,8 @@ code {
       <h1>Alert</h1>
       <section class="components">
         <div class="alert">
-          <strong>Success!</strong> You could add some transitions later.
+          <i class="fa-solid fa-circle-check"></i><strong>Success!</strong>
+          You could add some transitions later.
         </div>
       </section>
       <pre>
