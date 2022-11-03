@@ -11,3 +11,11 @@ export interface CategoryItem {
   categoryId: number;
   name: string;
 }
+
+export interface GameItem {
+  gameId: number;
+  gameStage: string;
+  gameName: string;
+  gameDifficulty: string;
+  gameDescription: string;
+}

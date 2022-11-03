@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
     component: HomeView,
   },
   {
-    path: "/game/:name",
+    path: "/game/",
     name: "games-view",
     component: GameView,
     props: true,

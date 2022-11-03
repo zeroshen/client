@@ -32,7 +32,7 @@ import NavList from "@/components/NavList.vue";
       <NavList style="padding-left: 0px; padding-top: 0px"></NavList>
     </section>
     <section class="game-button-container">
-      <router-link to="../components/Level1">
+      <router-link to="../game">
         <div class="button">Start the Game!</div>
       </router-link>
     </section>
