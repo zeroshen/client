@@ -111,8 +111,10 @@ const props = defineProps<{
         {{ props.game.gameDifficulty }}
       </div>
     </div>
-    <div class="list-item-end">
-      <button>Let's GO</button>
-    </div>
+    <router-link :to="'../game/' + props.game.gameStage">
+      <div class="list-item-end">
+        <button>Let's GO</button>
+      </div></router-link
+    >
   </div>
 </template>
