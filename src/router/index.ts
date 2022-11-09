@@ -15,6 +15,7 @@ import GridComponentView from "@/components/GridTuner.vue";
 import ComponentsPopOverView from "@/views/ComponentsPopOverView.vue";
 import AudioPlayerTuner from "@/components/AudioPlayerTuner.vue";
 import VideoPlayerTuner from "@/components/VideoPlayerTuner.vue";
+import TemplateView from "@/views/TemplateView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,6 +27,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/",
     name: "games-view",
     component: GameView,
+    props: true,
+  },
+  {
+    path: "/template",
+    name: "template-view",
+    component: TemplateView,
     props: true,
   },
   {
