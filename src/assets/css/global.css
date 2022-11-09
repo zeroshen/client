@@ -30,6 +30,11 @@
     --primary-background-color: whitesmoke;
     --secondary-background-color: burlywood;
     --card-background-color: navajowhite;
+    --vue-color-primary: #016f75;
+    --vue-color-secondary: #a1c754;
+    --vue-color-secondary-dark: #77933f;
+    --vue-color-easy: #4e4e4e;
+
 }
 
 /* RESET */
@@ -206,4 +211,9 @@ a, a:visited {
 
 a:hover, a:active {
 /* properties here */
+}
+
+/* Texts */
+.text-color-vue-entry {
+    color: var(--vue-color-easy);
 }

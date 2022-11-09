@@ -19,3 +19,17 @@ export interface GameItem {
   gameDifficulty: string;
   gameDescription: string;
 }
+
+export interface QuizItem {
+  question: string;
+  answer: number;
+  options: QuizOption[];
+  selected: number;
+  descriptions: string;
+}
+
+export interface QuizOption {
+  content: string;
+  optionId: number;
+  quizId: number;
+}

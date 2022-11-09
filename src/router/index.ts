@@ -15,6 +15,7 @@ import GridComponentView from "@/components/GridTuner.vue";
 import ComponentsPopOverView from "@/views/ComponentsPopOverView.vue";
 import AudioPlayerTuner from "@/components/AudioPlayerTuner.vue";
 import VideoPlayerTuner from "@/components/VideoPlayerTuner.vue";
+import GameLevelTwoView from "@/views/GameLevelTwoView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -32,6 +33,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/1",
     name: "games-level-1-view",
     component: GamesLevelOneView,
+    props: true,
+  },
+  {
+    path: "/game/2",
+    name: "games-level-2-view",
+    component: GameLevelTwoView,
     props: true,
   },
   /*Hard code need change later!*/
