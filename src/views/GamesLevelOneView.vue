@@ -56,25 +56,12 @@ const NextQuestion = () => {
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-}
-body {
-  color: #fff;
-}
-.app {
+.game-level-view {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-}
-h1 {
-  color: #111111;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  color: #fafafa;
 }
 .quiz {
   background-color: #382a4b;
@@ -124,7 +111,8 @@ h1 {
 .option input {
   display: none;
 }
-button {
+
+.game-button {
   appearance: none;
   outline: none;
   border: none;
@@ -137,23 +125,30 @@ button {
   font-size: 1.2rem;
   border-radius: 0.5rem;
 }
-button:disabled {
+.game-button:disabled {
   opacity: 0.5;
 }
-h2 {
+.game-level-view h1 {
+  color: #111111;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.game-level-view h2 {
   color: #111111;
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
 }
-p {
+
+.game-level-view p {
   color: #111111;
   font-size: 1.5rem;
   text-align: center;
 }
 </style>
+
 <template>
-  <main class="app">
+  <main class="game-level-view">
     <h1>The Quiz</h1>
 
     <section class="quiz" v-if="!quizCompleted">
@@ -193,7 +188,11 @@ p {
         </label>
       </div>
 
-      <button @click="NextQuestion" :disabled="!getCurrentQuestion.selected">
+      <button
+        class="game-button"
+        @click="NextQuestion"
+        :disabled="!getCurrentQuestion.selected"
+      >
         {{
           getCurrentQuestion.index == questions.length - 1
             ? "Finish"
