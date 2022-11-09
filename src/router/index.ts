@@ -7,6 +7,7 @@ import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
 import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
 import ComponentsInputView from "@/views/ComponentsInputView.vue";
 import GamesLevelOneView from "@/views/GamesLevelOneView.vue";
+import GameLevelOneQuizView from "@/views/GameLevelOneQuizView.vue";
 import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
 import CardTuner from "@/components/CardTuner.vue";
 import ComponentsSpinnerView from "@/views/ComponentsSpinnerView.vue";
@@ -16,6 +17,7 @@ import ComponentsPopOverView from "@/views/ComponentsPopOverView.vue";
 import AudioPlayerTuner from "@/components/AudioPlayerTuner.vue";
 import VideoPlayerTuner from "@/components/VideoPlayerTuner.vue";
 import GameLevelTwoView from "@/views/GameLevelTwoView.vue";
+import TemplateView from "@/views/TemplateView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -27,6 +29,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/",
     name: "games-view",
     component: GameView,
+    props: true,
+  },
+  {
+    path: "/template",
+    name: "template-view",
+    component: TemplateView,
     props: true,
   },
   {
