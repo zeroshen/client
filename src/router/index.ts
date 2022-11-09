@@ -44,6 +44,12 @@ const routes: Array<RouteRecordRaw> = [
     props: true,
   },
   {
+    path: "/game/1/quiz",
+    name: "games-level-1-quiz-view",
+    component: GameLevelOneQuizView,
+    props: true,
+  },
+  {
     path: "/game/2",
     name: "games-level-2-view",
     component: GameLevelTwoView,
