@@ -7,6 +7,7 @@ import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
 import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
 import ComponentsInputView from "@/views/ComponentsInputView.vue";
 import GamesLevelOneView from "@/views/GamesLevelOneView.vue";
+import GameLevelOneQuizView from "@/views/GameLevelOneQuizView.vue";
 import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
 import CardTuner from "@/components/CardTuner.vue";
 import ComponentsSpinnerView from "@/views/ComponentsSpinnerView.vue";
@@ -39,6 +40,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/1",
     name: "games-level-1-view",
     component: GamesLevelOneView,
+    props: true,
+  },
+  {
+    path: "/game/1/quiz",
+    name: "games-level-1-quiz-view",
+    component: GameLevelOneQuizView,
     props: true,
   },
   /*Hard code need change later!*/
