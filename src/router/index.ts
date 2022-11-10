@@ -18,6 +18,7 @@ import AudioPlayerTuner from "@/components/AudioPlayerTuner.vue";
 import VideoPlayerTuner from "@/components/VideoPlayerTuner.vue";
 import GameLevelTwoView from "@/views/GameLevelTwoView.vue";
 import TemplateView from "@/views/TemplateView.vue";
+import ComponentsBadgeView from "@/views/ComponentsBadgeView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -90,6 +91,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/NavBar",
     name: "components-navbar-view",
     component: ComponentsNavBarView,
+    props: true,
+  },
+  {
+    path: "/components/Badge",
+    name: "components-badge-view",
+    component: ComponentsBadgeView,
     props: true,
   },
   {
