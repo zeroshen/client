@@ -1,6 +1,6 @@
 <script setup></script>
 
-<style>
+<style scoped>
 .page-view {
   display: flex;
   flex-direction: column;

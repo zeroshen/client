@@ -2,7 +2,7 @@
 import ImageTuner from "@/components/ImageTuner.vue";
 </script>
 
-<style>
+<style scoped>
 .components-view {
   flex: 1;
   height: 100%;

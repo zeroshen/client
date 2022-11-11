@@ -8,7 +8,7 @@ const props = defineProps<{
 }>();
 </script>
 <script lang="ts"></script>
-<style>
+<style scoped>
 .quiz-box {
   width: 80%;
   height: 100%;
@@ -128,6 +128,13 @@ const props = defineProps<{
           @click="$emit('next')"
         >
           Next
+        </button>
+        <button
+          class="action-button finish-button"
+          v-else
+          @click="$emit('finish')"
+        >
+          Finish
         </button>
       </div>
     </div>

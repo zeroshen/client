@@ -55,7 +55,7 @@ const NextQuestion = () => {
 };
 </script>
 
-<style>
+<style scoped>
 .game-level-view {
   display: flex;
   flex-direction: column;

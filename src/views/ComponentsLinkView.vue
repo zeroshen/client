@@ -28,19 +28,42 @@ export default defineComponent({
 <style scoped>
 .page {
   display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex: 1;
+  min-height: 100%;
 }
-.code-container {
-  width: 80%;
+
+.content-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: initial;
   padding: 50px;
-  justify-content: center;
 }
+
+.code-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightgrey;
+}
+
 code {
-  padding: 10px;
+  padding: 0 12px;
   display: block;
   white-space: pre;
   background-color: lightgrey;
+}
+
+.components {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px 10px 0px;
+  justify-content: center;
+  align-items: initial;
+  width: 100%;
 }
 .link {
   padding: 10px 20px;
@@ -48,23 +71,22 @@ code {
   font-family: arail;
   cursor: pointer;
 }
-.components {
-  padding-top: 20px;
-}
 </style>
 <template>
   <div class="page">
     <NavList></NavList>
-    <section class="code-container">
+    <div class="content-wrapper">
       <h1>Link</h1>
       <section class="components">
         <router-link class="link" to="#">Example</router-link>
       </section>
-      <pre>
+      <section class="code-container">
+        <pre>
         <code>
          {{str}}
         </code>
       </pre>
-    </section>
+      </section>
+    </div>
   </div>
 </template>

@@ -5,7 +5,7 @@ const props = defineProps<{
   game: GameItem;
 }>();
 </script>
-<style>
+<style scoped>
 .list-item {
   display: flex;
   flex-direction: row;

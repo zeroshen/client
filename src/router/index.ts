@@ -19,6 +19,8 @@ import VideoPlayerTuner from "@/components/VideoPlayerTuner.vue";
 import GameLevelTwoView from "@/views/GameLevelTwoView.vue";
 import TemplateView from "@/views/TemplateView.vue";
 import ComponentsBadgeView from "@/views/ComponentsBadgeView.vue";
+import NavigationTuner from "@/components/NavigationTuner.vue";
+import SampleCard from "@/components/SampleCard.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -88,8 +90,8 @@ const routes: Array<RouteRecordRaw> = [
     props: true,
   },
   {
-    path: "/components/NavBar",
-    name: "components-navbar-view",
+    path: "/components/Tab",
+    name: "components-tab-view",
     component: ComponentsNavBarView,
     props: true,
   },
@@ -133,6 +135,18 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/video",
     name: "video-player-tuner",
     component: VideoPlayerTuner,
+    props: true,
+  },
+  {
+    path: "/components/nav",
+    name: "nav-tuner",
+    component: NavigationTuner,
+    props: true,
+  },
+  {
+    path: "/components/sample",
+    name: "sample-card",
+    component: SampleCard,
     props: true,
   },
 ];

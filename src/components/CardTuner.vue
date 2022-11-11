@@ -11,13 +11,13 @@ export default defineComponent({
       "\nCSS Part:\n" +
       ".card-sample {\n" +
       "  border-radius: 4px;\n" +
-      "  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),\n" +
-      "    0 6px 20px 0 rgba(0, 0, 0, 0.19);\n" +
+      "  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);\n" +
       "  color: black;\n" +
       "  margin: 8px;\n" +
       "  min-width: 290px;\n" +
       "  max-width: 400px;\n" +
-      "  overflow: hidden;\n" +
+      "  height: auto;\n" +
+      "  overflow: hidden;" +
       "}\n" +
       ".card-sample .image-wrapper {\n" +
       "  position: relative;\n" +
@@ -97,28 +97,35 @@ export default defineComponent({
   background-color: lightgrey;
 }
 
+code {
+  padding: 0 12px;
+  display: block;
+  white-space: pre;
+  background-color: lightgrey;
+}
+
 .components {
   display: flex;
   flex-direction: column;
-  padding: 10px 10px 10px 0px;
+  padding: 10px 0px 10px 0px;
   justify-content: center;
   align-items: initial;
   width: 100%;
 }
 
+.components > .card-sample {
+  margin-left: 0px;
+}
+
 .card-sample {
   border-radius: 4px;
-  border-color: #333333;
-  border-width: 0.5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: black;
   margin: 8px;
   min-width: 290px;
   max-width: 400px;
+  height: auto;
   overflow: hidden;
-}
-
-.components > .card-sample {
-  margin-left: 0px;
 }
 
 .card-sample .image-wrapper {

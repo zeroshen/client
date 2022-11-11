@@ -142,6 +142,14 @@ export default defineComponent({
   width: 100%;
   flex: 1;
 }
+
+code {
+  padding: 0 12px;
+  display: block;
+  white-space: pre;
+  background-color: lightgrey;
+}
+
 .image-tuner {
   min-width: 80%;
   min-height: 100%;

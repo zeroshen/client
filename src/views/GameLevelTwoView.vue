@@ -52,11 +52,14 @@ export default defineComponent({
         this.current += 1;
       }
     },
+    finish() {
+      console.log("finished");
+    },
   },
 });
 </script>
 
-<style>
+<style scoped>
 .game-view {
   flex: 1;
   min-height: 100%;
@@ -109,6 +112,7 @@ export default defineComponent({
           :finished="this.current >= this.questions.length - 1"
           @answered="answered"
           @next="next"
+          @finish="finish"
         ></quiz-box>
       </div>
     </div>
