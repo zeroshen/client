@@ -8,6 +8,8 @@ import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
 import ComponentsInputView from "@/views/ComponentsInputView.vue";
 import GamesLevelOneView from "@/views/GamesLevelOneView.vue";
 import GameLevelOneQuizView from "@/views/GameLevelOneQuizView.vue";
+import GamesLevelThreeView from "@/views/GameLevelThreeView.vue";
+import GameLevelThreeQuizView from "@/views/GameLevelThreeQuizView.vue";
 import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
 import CardTuner from "@/components/CardTuner.vue";
 import ComponentsSpinnerView from "@/views/ComponentsSpinnerView.vue";
@@ -56,6 +58,18 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/2",
     name: "games-level-2-view",
     component: GameLevelTwoView,
+    props: true,
+  },
+  {
+    path: "/game/3",
+    name: "games-level-3-view",
+    component: GamesLevelThreeView,
+    props: true,
+  },
+  {
+    path: "/game/3/quiz",
+    name: "games-level-3-quiz-view",
+    component: GameLevelThreeQuizView,
     props: true,
   },
   /*Hard code need change later!*/
