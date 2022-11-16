@@ -26,6 +26,11 @@
   border: none;
   cursor: pointer;
 }
+.game-text {
+  font-family: "Times New Roman";
+  font-style: italic;
+  color: darkgray;
+}
 </style>
 
 <template>
@@ -91,6 +96,19 @@
       takes a while to boot up. We highly recommend these requirements.
       <br />
       To setup the environment for your web applications, do the following:
+    </div>
+    <div class="group-words game-text">
+      <h1>Start to Build a Website</h1>
+      Mary is an employee of a new company. Now, they want to build a new
+      website. You could follow the steps below. It is fine for you to get the
+      resources from the components pages or online.
+      <br />
+      <br />
+      <h3>Download the Template</h3>
+      <br />
+      <br />
+      <h3>Try to Print Something</h3>
+      Do something in the template file(TODO tags)
     </div>
     <router-link to="../game/1/quiz">
       <button class="quiz-button">Go to Quiz</button>
