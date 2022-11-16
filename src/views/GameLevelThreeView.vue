@@ -76,6 +76,14 @@
       <br />
       <h3>Try to Build a Button</h3>
       Do something in the template file(TODO tags)
+      <br />
+      <br />
+      <h3>Try to Build a Link</h3>
+      Do something in the template file(TODO tags)
+      <br />
+      <br />
+      <h3>Try to Build a Input</h3>
+      Do something in the template file(TODO tags)
     </div>
     <router-link to="../game/3/quiz">
       <button class="quiz-button">Go to Quiz</button>
