@@ -87,7 +87,10 @@ export default defineComponent({
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 0.5rem;
+  padding-top: 2rem;
+}
+.game-texts {
+  padding-top: 2rem;
 }
 </style>
 
@@ -103,6 +106,28 @@ export default defineComponent({
           inside. As now it might no longer seems like a magic power to you when
           you are looking at the websites. How about looking into how a website
           was constructed in its very essence form.
+        </div>
+      </div>
+      <div class="game-texts">
+        <h3 class="game-text-title">
+          What is <span class="text-color-vue-entry">CSS</span>
+        </h3>
+        <div>
+          According to W3school.com, css is the language to style an html
+          document, describing how html elements should be displayed. CSS is the
+          abbreviation of
+          <span class="text-color-vue-dark">Cascading Style Sheets</span>. In
+          the industry we computer scientists don't like wordiness, so it is
+          more preferred to use CSS. However as some ancient wise man said, the
+          name itself could contain a lot of the information about the object.
+          <br />
+          <span class="text-color-vue-dark">Style sheets</span> simply describes
+          the essential of css codes: it describes what style the html document
+          is displayed to the users. <br />
+          <span class="text-color-vue-dark">Cascading</span> however, indicates
+          that the computer sees the css sheets cascade, in the other word from
+          top to bottom. Keeping this in mind can solve a lot of difficulties
+          for you in the future works, and we will talk about this a bit later.
         </div>
       </div>
       <div class="game-quiz game-quiz-ready">
