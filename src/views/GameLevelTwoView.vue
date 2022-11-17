@@ -246,15 +246,6 @@ export default defineComponent({
           property will be that dropdown menu "font" and the value could be your
           nice ol' "Times New Roman"
           <br />
-          <pre>
-            <code>
-              selector
-              {
-                property1: value1;
-                property2: value2;
-              }
-            </code>
-          </pre>
           Surely in css, we have a lot of ways to select the components, to make
           it very, very versatile. And the most common ones you'll be using are
           tag (with the tag name), class (with .classname), and id (with
