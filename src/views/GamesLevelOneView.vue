@@ -99,9 +99,10 @@
     </div>
     <div class="group-words game-text">
       <h1>Start to Build a Website</h1>
-      Mary is an employee of a new company. Now, they want to build a new
-      website. You could follow the steps below. It is fine for you to get the
-      resources from the components pages or online.
+      Mary is a graduate student in a college. Now, she want to build her own
+      website to show the profile and experience of her. (You could follow the
+      steps below. It is fine for you to get the resources from the components
+      pages or online.)
       <br />
       <br />
       <h3>Download the Template</h3>

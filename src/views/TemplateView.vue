@@ -36,12 +36,15 @@
 }
 </style>
 <template>
+  <!--  TODO:-->
   <div class="template-nav">Add navigation bar here</div>
   <div class="home-page">
     <section class="template-link">
+      <!--  TODO:-->
       <div>Add link here</div>
     </section>
     <section class="template-button-container">
+      <!--  TODO:-->
       <div>Add button here</div>
     </section>
   </div>
@@ -49,8 +52,3 @@
     Add several components here(with modified colors/fonts/styles)
   </div>
 </template>
-<script>
-export default {
-  components: {},
-};
-</script>
