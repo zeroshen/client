@@ -111,10 +111,12 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+.game-view {
+  flex: 1;
+  min-height: 100%;
+}
 .game-quiz {
   min-width: 100%;
-  height: 100%;
-  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -122,7 +124,7 @@ export default defineComponent({
 }
 </style>
 <template>
-  <section>
+  <section class="game-view">
     <div class="game-quiz game-quiz-ready">
       <quiz-box
         :question="getQuestion(current)"

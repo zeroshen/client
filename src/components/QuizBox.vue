@@ -12,6 +12,7 @@ const props = defineProps<{
 .quiz-box {
   width: 80%;
   height: 100%;
+  min-height: 430px;
   padding: 1rem 0.5rem;
   background-color: #00939c;
   color: #fafafa;

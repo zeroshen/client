@@ -202,6 +202,19 @@ export default defineComponent({
   font-style: italic;
   color: darkgray;
 }
+
+.quiz-button {
+  background-color: #00939c;
+  color: #fafafa;
+  border: none;
+}
+
+.quiz-button:hover {
+  background-color: #016f75;
+  color: #fafafa;
+  border: none;
+  cursor: pointer;
+}
 </style>
 
 <template>
