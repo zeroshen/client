@@ -24,6 +24,7 @@ import NavigationTuner from "@/components/NavigationTuner.vue";
 import SampleCard from "@/components/SampleCard.vue";
 import TextTuner from "@/components/TextTuner.vue";
 import GameLevelTwoQuizView from "@/views/GameLevelTwoQuizView.vue";
+import AspectRatio from "@/components/AspectRatio.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -174,6 +175,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/text",
     name: "text-tuner",
     component: TextTuner,
+    props: true,
+  },
+  {
+    path: "/components/aspectratio",
+    name: "aspect-ratio-tuner",
+    component: AspectRatio,
     props: true,
   },
 ];

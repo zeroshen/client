@@ -22,6 +22,9 @@
       <li><router-link to="../components/PopOver">PopOver</router-link></li>
       <li><router-link to="../components/Image">Images</router-link></li>
       <li><router-link to="../components/Card">Card</router-link></li>
+      <li>
+        <router-link to="../components/AspectRatio">Aspect Ratio</router-link>
+      </li>
       <li><router-link to="../components/Grid">Grid</router-link></li>
       <li><router-link to="../components/Audio">Audio</router-link></li>
       <li><router-link to="../components/Video">Video</router-link></li>
