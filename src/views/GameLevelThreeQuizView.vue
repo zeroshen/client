@@ -2,9 +2,14 @@
 import { ref, computed } from "vue";
 const questions = ref([
   {
-    question: "What is Vue?",
+    question:
+      " Which of the following statement is correct for components props in Vue.js?",
     answer: 0,
-    options: ["A framework", "A library", "A type of hat"],
+    options: [
+      "Props are used to pass down data to the child components.",
+      "Props are custom attributes that you can register on a component.",
+      "When a value is passed to a prop attribute, it becomes a property on that component instance.",
+    ],
     selected: null,
   },
   {

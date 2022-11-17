@@ -105,6 +105,7 @@
       <br />
       <br />
       <h3>Download the Template</h3>
+      <router-link to="/template"> Template Link </router-link>
       <br />
       <br />
       <h3>Try to Print Something</h3>
