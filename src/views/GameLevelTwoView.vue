@@ -9,30 +9,6 @@ import { QuizOption } from "@/types";
 
 export default defineComponent({
   data() {
-    const questions: QuizItem[] = [
-      {
-        question: "Ready?",
-        answer: 0,
-        options: [
-          { content: "Yep!", optionId: 0, quizId: 0 },
-          { content: "Nah..", optionId: 1, quizId: 0 },
-        ] as QuizOption[],
-        selected: -1,
-        descriptions: "",
-      },
-      {
-        question: "What does CSS stand for?",
-        answer: 1,
-        options: [
-          { content: "Cascading Size Sheets", optionId: 0, quizId: 1 },
-          { content: "Cascading Style Sheets", optionId: 1, quizId: 1 },
-          { content: "Cascaded Style Sheets", optionId: 2, quizId: 1 },
-          { content: "Carrot Smelly Smelly", optionId: 3, quizId: 1 },
-        ] as QuizOption[],
-        selected: -1,
-        descriptions: "",
-      },
-    ];
     const current = 0;
     const codes =
       "              <div>Hello tag div</div>\n" +
@@ -111,28 +87,10 @@ export default defineComponent({
       "         </div>\n" +
       "    </div>\n" +
       "</div>";
-    return { questions, current, codes, style_samples, card_sample_code };
+    return { current, codes, style_samples, card_sample_code };
   },
   computed: {},
-  methods: {
-    getQuestion(ind: number) {
-      return this.questions[ind];
-    },
-    answered(optionInd: number, questionInd: number) {
-      this.questions[questionInd].selected = optionInd;
-      if (this.questions[questionInd].answer == optionInd) {
-        console.log("hi");
-      }
-    },
-    next() {
-      if (this.current < this.questions.length - 1) {
-        this.current += 1;
-      }
-    },
-    finish() {
-      console.log("finished");
-    },
-  },
+  methods: {},
 });
 </script>
 

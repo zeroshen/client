@@ -219,5 +219,9 @@ a:hover, a:active {
 }
 
 .text-color-vue-dark {
-    color: var(--vue-color-secondary-dark)
+    color: var(--vue-color-secondary-dark);
+}
+
+.text-color-vue-intermediate {
+    color: var(--vue-color-primary);
 }

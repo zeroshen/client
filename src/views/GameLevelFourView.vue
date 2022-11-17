@@ -9,30 +9,6 @@ import { QuizOption } from "@/types";
 
 export default defineComponent({
   data() {
-    const questions: QuizItem[] = [
-      {
-        question: "Ready?",
-        answer: 0,
-        options: [
-          { content: "Yep!", optionId: 0, quizId: 0 },
-          { content: "Nah..", optionId: 1, quizId: 0 },
-        ] as QuizOption[],
-        selected: -1,
-        descriptions: "",
-      },
-      {
-        question: "What does CSS stand for?",
-        answer: 1,
-        options: [
-          { content: "Cascading Size Sheets", optionId: 0, quizId: 1 },
-          { content: "Cascading Style Sheets", optionId: 1, quizId: 1 },
-          { content: "Cascaded Style Sheets", optionId: 2, quizId: 1 },
-          { content: "Carrot Smelly Smelly", optionId: 3, quizId: 1 },
-        ] as QuizOption[],
-        selected: -1,
-        descriptions: "",
-      },
-    ];
     const current = 0;
     const codes =
       "              <div>Hello tag div</div>\n" +
@@ -111,28 +87,10 @@ export default defineComponent({
       "         </div>\n" +
       "    </div>\n" +
       "</div>";
-    return { questions, current, codes, style_samples, card_sample_code };
+    return { current, codes, style_samples, card_sample_code };
   },
   computed: {},
-  methods: {
-    getQuestion(ind: number) {
-      return this.questions[ind];
-    },
-    answered(optionInd: number, questionInd: number) {
-      this.questions[questionInd].selected = optionInd;
-      if (this.questions[questionInd].answer == optionInd) {
-        console.log("hi");
-      }
-    },
-    next() {
-      if (this.current < this.questions.length - 1) {
-        this.current += 1;
-      }
-    },
-    finish() {
-      console.log("finished");
-    },
-  },
+  methods: {},
 });
 </script>
 
@@ -215,145 +173,209 @@ export default defineComponent({
   border: none;
   cursor: pointer;
 }
+
+.nav-container {
+  background-color: #f7f4e8;
+  width: 360px;
+  border-radius: 25px;
+}
+
+.nav-headline {
+  margin: 20px 16px;
+  color: #484738;
+  /* 56px- */
+}
+
+.nav-container li {
+  line-height: 56px;
+  margin: 0 28px;
+}
+
+.nav-container .nav-active-indicator,
+li:hover {
+  padding: 0 16px;
+  margin: 0 12px;
+  border-radius: 25px 25px;
+  background-color: #e6e4c4;
+  cursor: pointer;
+}
+.nav-line-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-upper li:last-child .nav-line-content {
+  border-bottom: 1px #787669 solid;
+  width: 100%;
+}
+
+i {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.nav-lower i {
+  font-size: 12px;
+  text-align: center;
+}
 </style>
 
 <template>
   <section class="game-view">
     <div class="game-level">
       <div class="game-level-intro">
-        <h1 class="game-title">Stage 2 - What is going on with HTML/CSS</h1>
+        <h1 class="game-title">Stage 4 - Components extended</h1>
         <div>
           Congrats to our
-          <span class="text-color-vue-entry">Vue Apprentice</span> on acquiring
-          the basic knowledge of how a web application was constructed from
-          inside. As now it might no longer seems like a magic power to you when
-          you are looking at the websites. How about looking into how a website
-          was constructed in its very essence form.
+          <span class="text-color-vue-intermediate">Vue Apprentice</span> on
+          acquiring the basic knowledge of vue components. Now it is possible
+          for you to build a website with the basic components like
+          <code>button</code>, <code>link</code>, or <code>span</code>. However,
+          your website might still look just
+          <span class="text-color-vue-dark">a bit too simple</span> with the
+          basic components. So to take one step further, to make your webpage
+          more advanced, we'll show you how to create more customized components
+          with css styling.
         </div>
       </div>
       <div class="game-texts">
         <h3 class="game-text-title">
-          What is <span class="text-color-vue-entry">CSS</span>
+          Designing a <span class="text-color-vue-entry">Component</span>
         </h3>
         <div>
-          According to W3school.com, css is the language to style an html
-          document, describing how html elements should be displayed. CSS is the
-          abbreviation of
-          <span class="text-color-vue-dark">Cascading Style Sheets</span>. In
-          the industry we computer scientists don't like wordiness, so it is
-          more preferred to use CSS. However as some ancient wise man said, the
-          name itself could contain a lot of the information about the object.
+          I won't deny the fact that every programmer can design their own web
+          page completely to their liking. However, at the end, a webpage is
+          more than just a canvas for a designer's
+          <span class="text-color-vue-dark">inspirations</span>, but it also
+          needs to be
+          <span class="text-color-vue-intermediate">practical</span>. At the end
+          of the day, what a
+          <span class="text-color-vue-intermediate">user</span> usually seeks in
+          a webpage is the information delivered in the page. Therefore, the
+          design of a webpage should serve to better present the information and
+          make viewer more engaged to the information. Further, most websites
+          now follow a more uniform design philosophy. And
+          <span class="text-color-vue-intermediate">users</span> have developed
+          a <span class="text-color-vue-intermediate">familiar pattern</span> of
+          acquiring information taken from one website while using various
+          different websites. Therefore, it is always a good idea to follow the
+          common patterns to avoid giving the users a hard time, and unleash
+          your creativity. Thinking about building a library with three rooms,
+          one has a door open from left to right, one has right to left, one a
+          "storage unit kind of door". Such a library can be confusing to
+          occupy, since the way to get across the building is very inconsistent.
           <br />
-          <span class="text-color-vue-dark">Style sheets</span> simply describes
-          the essential of css codes: it describes what style the html document
-          is displayed to the users. <br />
-          <span class="text-color-vue-dark">Cascading</span> however, indicates
-          that the computer sees the css sheets cascade, in the other word from
-          top to bottom. Keeping this in mind can solve a lot of difficulties
-          for you in the future works, and we will talk about this a bit later.
+          In general, today's web page would have a navigation bar (mostly
+          header, sometimes side bar), a footer, and the main body. The
+          navigation bar usually contains logo, possibly search bar, navigation
+          links, and user's account info. The footer, in most cases, consists
+          copyright information, description to the organization, and contacts
+          or links to social media. The main body in the middle can be a bit
+          more varying, but as the name suggests, it contains all the important
+          information and utilities of this page.
         </div>
       </div>
       <div class="game-texts">
-        <h3 class="game-text-title">How does CSS work</h3>
+        <h3 class="game-text-title">Material Design</h3>
         <div>
-          So how does CSS work? First, without CSS, the browsers will still
-          render your html file, but in a rough way. It will simply have texts
-          in each "div" rendered from top to bottom, with headers larger than
-          plain texts. And the "div"s would only be "paragraph"s in your plain
-          word (or pages for those Apple fans) documents. Which is
-          <span class="text-color-vue-entry">BORING</span>. Therefore, we'll
-          need CSS, to bring a little bit of
-          <span class="text-color-vue-dark">Chic</span> to your plain documents.
+          With these constraints, the design can still vary from website to
+          website. For a beginner, one of the easiest practice is to follow a
+          <span class="text-color-vue-intermediate">big/well-known</span>
+          organization and see what they are doing. Among the most popular
+          websites and apps today, like AirBnb, NetFlix, LinkedIn, Twitter, we
+          choose the design system published by Google in this tutorial. The
+          design system, Material Design, published by Google has design specs
+          and guidelines publicly accessible. And it is proven to work as there
+          are a lot of existing ui kits published based on Material Design
+          everywhere. So why not try follow these design principles, and get an
+          understanding on the design of ui as well as how to build a website.
           <br />
-          With CSS, our ultimate weapon to knock down styling in webpages,
-          allows us to declare styles properties for each components (parts) of
-          your webpage. Generally, in a CSS file, you shall see some thing like
-          the following.
-          <code>
-            <pre>
-              selector
-              {
-                property1: value1;
-                property2: value2;
-              }
-            </pre>
-          </code>
-          The selector would allow you to select the component you'd like to
-          style, and the property-value pair inside the brackets are the styles
-          you are giving to the component. While there are a lot of more
-          technical explanations for this syntax, you can simply think of it as
-          the case you are styling a couple of sentences in your word document.
-          You are highlighting the sentence you are about to change with the
-          selector. And say you are changing the font for that sentence,
-          property will be that dropdown menu "font" and the value could be your
-          nice ol' "Times New Roman"
-          <br />
-          <pre>
-            <code>
-              selector
-              {
-                property1: value1;
-                property2: value2;
-              }
-            </code>
-          </pre>
-          Surely in css, we have a lot of ways to select the components, to make
-          it very, very versatile. And the most common ones you'll be using are
-          tag (with the tag name), class (with .classname), and id (with
-          #classname). For example:
-          <pre><code>{{codes}}</code></pre>
-          With style:
-          <pre><code>{{style_samples}}</code></pre>
-          Will give you:
-          <div class="inline-example">
-            <div>Hello tag div</div>
-            <div class="hello1">Hello 1 class</div>
-            <div class="hello1">Hello 1 class 2</div>
-            <div id="hello3">Hello 3 tag</div>
-            <div>Hello tag div 2</div>
+          Below is an example of navigation drawer implemented following the
+          material design. You can find the code snippets in template
+          <div class="nav-container">
+            <div class="nav-upper">
+              <div class="nav-headline">Mail</div>
+              <ul>
+                <li class="nav-active-indicator">
+                  <div class="nav-line-content">
+                    <span><i class="fa-solid fa-envelope"></i>Inbox</span
+                    ><span>25</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-line-content">
+                    <span><i class="fa-solid fa-inbox"></i>Outbox</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-line-content">
+                    <span><i class="fa-solid fa-star"></i>Favorites</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-line-content">
+                    <span><i class="fa-solid fa-trash"></i>Trash</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-lower">
+              <div class="nav-headline">Labels</div>
+              <ul>
+                <li>
+                  <div class="nav-line-content">
+                    <span><i class="fa-solid fa-circle"></i>label 1</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-line-content">
+                    <span><i class="fa-solid fa-diamond"></i>label 2</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-line-content">
+                    <span><i class="fa-solid fa-square"></i>label 3</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-line-content">
+                    <span><i class="fa-solid fa-diamond"></i>label 4</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
-          You should notice three major things: first, a selector will select
-          everything that has tag, classname or id that matches the selector.
-          And everything selected by this selector will be styled with the
-          property-value pair. And as you can see, recall to the concept of
-          cascading, the style that is given in the lower place will take over
-          the style in the earlier place.
-          <br />
-          <span class="text-color-vue-dark">Note: </span>
-          By the "supreme law" of CSS, each <code>id</code> should refer to only
-          <span class="text-color-vue-dark">one</span> unique component in an
-          html file. Or otherwise there's no difference between
-          <code>id</code> and <code>class. </code> <br />
-          Of course, css can be way more powerful than simply a font machine.
-          You can set width, height, border, color, background color, shadow,
-          animation, transition, and layout of your html. And simply with html
-          and css, you can create amazon webpage components that look very cool.
-          Following is a example of a "card" in a website, following the design
-          principles of material design published by google. And for further
-          understanding of CSS, you can always go to
-          <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">
-            Mdn Web docs
-          </a>
-          for more info
         </div>
-        <div class="sample-card">
-          <sample-card></sample-card>
-          <pre><code>{{card_sample_code}}</code></pre>
-        </div>
+      </div>
+      <div class="game-texts">
         <div class="group-words game-text">
-          <h1>Tasks: Styling your web page</h1>
-          Try to add something to your html file, and add style things that you
-          added
+          <h1>Tasks: Build your customized components</h1>
+          Try to build your components following the design guidelines of
+          Material Design
           <br />
           <br />
           <h3>Download the Template</h3>
           <router-link to="/template"> Template Link </router-link>
           <br />
           <br />
-          <h3>Style the contents</h3>
-          We are giving you the plain html templates with lorem ipsum
-          placeholders. Add information you would like to be presented in your
-          web page, and style them nicely with plain css and html.
+          <h3>
+            Remember when you are modifying the template, try also look at the
+            design specs in the official documentation of material design
+          </h3>
+          <a href="https://m3.material.io/foundations">
+            Link to documentation
+          </a>
+          <br />
+          <br />
+          <h3>Style the components</h3>
+          We have gave you an example of navigation drawer, which includes
+          styling properties of border, layout, margin, padding, colors, and
+          alignment following the design guidelines of Material Design. Try
+          modify another components in the template which you think would be
+          useful for your page.
         </div>
       </div>
 
