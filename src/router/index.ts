@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import GameView from "@/views/GamesView.vue";
 import HomeView from "@/views/HomeView.vue";
-//import ComponentsView from "@/views/ComponentsView.vue";
 import ImageTuner from "@/components/ImageTuner.vue";
 import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
 import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
@@ -23,6 +22,8 @@ import TemplateView from "@/views/TemplateView.vue";
 import ComponentsBadgeView from "@/views/ComponentsBadgeView.vue";
 import NavigationTuner from "@/components/NavigationTuner.vue";
 import SampleCard from "@/components/SampleCard.vue";
+import TextTuner from "@/components/TextTuner.vue";
+import GameLevelTwoQuizView from "@/views/GameLevelTwoQuizView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -58,6 +59,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/2",
     name: "games-level-2-view",
     component: GameLevelTwoView,
+    props: true,
+  },
+  {
+    path: "/game/2/quiz",
+    name: "games-level-2-quiz-view",
+    component: GameLevelTwoQuizView,
     props: true,
   },
   {
@@ -161,6 +168,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/components/sample",
     name: "sample-card",
     component: SampleCard,
+    props: true,
+  },
+  {
+    path: "/components/text",
+    name: "text-tuner",
+    component: TextTuner,
     props: true,
   },
 ];

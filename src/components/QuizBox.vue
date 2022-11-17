@@ -39,7 +39,6 @@ const props = defineProps<{
   background-color: var(--vue-color-secondary);
   width: 80%;
   color: #fafafa;
-  text-transform: uppercase;
   margin: 10px 5px;
   padding: 10px;
   border: none;

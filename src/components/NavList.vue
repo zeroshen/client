@@ -11,6 +11,7 @@
 <template>
   <section class="components-list">
     <ul>
+      <li><router-link to="../components/Text">Texts</router-link></li>
       <li><router-link to="../components/Button">Button</router-link></li>
       <li><router-link to="../components/Alert">Alert</router-link></li>
       <li><router-link to="../components/Input">Input</router-link></li>
