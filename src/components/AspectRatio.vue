@@ -62,7 +62,7 @@ export default defineComponent({
   },
 });
 </script>
-<style>
+<style scoped>
 .page {
   display: flex;
   width: 100%;

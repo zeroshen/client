@@ -25,6 +25,7 @@ import SampleCard from "@/components/SampleCard.vue";
 import TextTuner from "@/components/TextTuner.vue";
 import GameLevelTwoQuizView from "@/views/GameLevelTwoQuizView.vue";
 import AspectRatio from "@/components/AspectRatio.vue";
+import GameLevelFourView from "@/views/GameLevelFourView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -78,6 +79,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/3/quiz",
     name: "games-level-3-quiz-view",
     component: GameLevelThreeQuizView,
+    props: true,
+  },
+  {
+    path: "/game/4",
+    name: "games-level-4-view",
+    component: GameLevelFourView,
     props: true,
   },
   /*Hard code need change later!*/
