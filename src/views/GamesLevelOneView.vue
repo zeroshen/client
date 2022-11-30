@@ -19,6 +19,9 @@
   border: none;
   margin: 40px;
 }
+li {
+  list-style-type: circle;
+}
 
 .quiz-button:hover {
   background-color: #016f75;
@@ -35,6 +38,9 @@
 
 <template>
   <section class="page-view">
+    <div class="group-words">
+      <h1 style="color: var(--vue-color-primary)">Stage 1: Introduction</h1>
+    </div>
     <div class="group-words">
       <h1>What is Vue?</h1>
       Vue (pronounced /vjuː/, like view) is a JavaScript framework for building
@@ -96,6 +102,17 @@
       takes a while to boot up. We highly recommend these requirements.
       <br />
       To setup the environment for your web applications, do the following:
+      <br />
+      <ul>
+        <li>Step 1: Create a working directory</li>
+        <li>Step 2. Check for Java 11</li>
+        <li>Step 3: Install IntelliJ IDEA Ultimate</li>
+        <li>Step 4: Install Tomcat 9</li>
+        <li>Step 5: Install Node JS</li>
+        <li>Step 6: Install Vue CLI</li>
+        <li>Step 7: Install the Vue plugin for IntelliJ</li>
+        <li>Step 8: Install the Vue devtools extension for Chrome</li>
+      </ul>
     </div>
     <div class="group-words game-text">
       <h1>Start to Build a Website</h1>
@@ -110,7 +127,8 @@
       <br />
       <br />
       <h3>Try to Print Something</h3>
-      Do something in the template file(TODO tags)
+      Try to print something in console, you could modify the code in the
+      "script" tag.
     </div>
     <router-link to="../game/1/quiz">
       <button class="quiz-button">Go to Quiz</button>

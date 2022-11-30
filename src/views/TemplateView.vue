@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// TODO: Try to print something;
+console.log();
+</script>
 
 <style scoped>
 .template-nav {
