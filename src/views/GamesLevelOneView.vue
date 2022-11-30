@@ -39,7 +39,7 @@ li {
 <template>
   <section class="page-view">
     <div class="group-words">
-      <h1 style="color: var(--vue-color-primary)">Stage 1: Introduction</h1>
+      <h1 style="color: var(--vue-color-primary)">Stage 1 - Introduction</h1>
     </div>
     <div class="group-words">
       <h1>What is Vue?</h1>

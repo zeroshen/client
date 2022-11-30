@@ -36,6 +36,9 @@
 <template>
   <section class="page-view">
     <div class="group-words">
+      <h1 style="color: var(--vue-color-primary)">Stage 3 - Components</h1>
+    </div>
+    <div class="group-words">
       <h1>Components Basics</h1>
       Components allow us to split the UI into independent and reusable pieces,
       and think about each piece in isolation. It's common for an app to be

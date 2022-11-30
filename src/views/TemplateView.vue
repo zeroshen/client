@@ -39,19 +39,21 @@ console.log();
 }
 </style>
 <template>
-  <!--  TODO:-->
+  <!--  TODO: Add navigation bar here-->
   <div class="template-nav">Add navigation bar here</div>
   <div class="home-page">
     <section class="template-link">
-      <!--  TODO:-->
+      <!--  TODO: Add link here-->
       <div>Add link here</div>
     </section>
     <section class="template-button-container">
-      <!--  TODO:-->
+      <!--  TODO: Add button here-->
       <div>Add button here</div>
     </section>
   </div>
   <div class="template-footer">
     Add several components here(with modified colors/fonts/styles)
+    <!--  TODO: Add Input here-->
+    <div>Add Input here</div>
   </div>
 </template>
