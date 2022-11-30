@@ -19,8 +19,9 @@
   border: none;
   margin: 40px;
 }
-li {
-  list-style-type: circle;
+ol,
+ul {
+  list-style: circle;
 }
 
 .quiz-button:hover {

@@ -7,6 +7,12 @@
   padding-left: 50px;
   padding-top: 50px;
 }
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 </style>
 <template>
   <section class="components-list">
