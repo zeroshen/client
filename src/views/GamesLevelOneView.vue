@@ -112,6 +112,10 @@ li {
         <li>Step 6: Install Vue CLI</li>
         <li>Step 7: Install the Vue plugin for IntelliJ</li>
         <li>Step 8: Install the Vue devtools extension for Chrome</li>
+        <li>
+          Step 9: Create the client module. It will take you to a terminal
+          window inside of IntelliJ. Choose Automatically choose features.
+        </li>
       </ul>
     </div>
     <div class="group-words game-text">
