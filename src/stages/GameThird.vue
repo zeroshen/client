@@ -261,7 +261,7 @@ const jump = function () {
           <button
             class="next button primary-button"
             :disabled="passed === false || !validate !== 'red'"
-            @click="$emit('next')"
+            @click="$emit('finished')"
             v-if="props.finished"
           >
             <span class="button-text">FINISHED</span>
