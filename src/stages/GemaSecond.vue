@@ -1,5 +1,11 @@
-<script setup lang="ts"></script>
-<script>
+<script setup lang="ts">
+import { defineProps } from "vue";
+const props = defineProps<{
+  num: number;
+  finished: boolean;
+}>();
+</script>
+<script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
   data() {
@@ -48,20 +54,6 @@ export default defineComponent({
       );
     },
     conditional_blink() {
-      /**
-       * color,
-       *       border_radius,
-       *       bgcolor,
-       *       padding,
-       *       font_size,
-       *       hover_color,
-       * background-color: #016f75;
-       * color: #fafafa;
-       *   border: none;
-       *   padding: 10px 24px;
-       *   border-radius: 5px;
-       *   font-size: 20px;
-       * **/
       if (this.validate()) {
         this.blink();
         this.passed = true;
@@ -273,6 +265,15 @@ const jump = function () {
             class="next button primary-button"
             :disabled="passed === false || validate() != true"
             @click="$emit('next')"
+            v-if="props.finished"
+          >
+            <span class="button-text">FINISHED</span>
+          </button>
+          <button
+            class="next button primary-button"
+            :disabled="passed === false || validate() != true"
+            @click="$emit('next')"
+            v-else
           >
             <span class="button-text">HERE WE GO!</span>
           </button>

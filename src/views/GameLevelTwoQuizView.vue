@@ -2,6 +2,8 @@
 import QuizBox from "@/components/QuizBox.vue";
 import GameFirst from "@/stages/GameFirst.vue";
 import GameSecond from "@/stages/GemaSecond.vue";
+import GameThird from "@/stages/GameThird.vue";
+import GameFour from "@/stages/GameFour.vue";
 </script>
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -130,6 +132,8 @@ export default defineComponent({
     <div class="game-quiz game-quiz-ready">
       <GameFirst v-show="current == 0" @next="next"></GameFirst>
       <GameSecond v-show="current == 1" @next="next"></GameSecond>
+      <GameThird v-show="current == 2" @next="next"></GameThird>
+      <GameFour v-show="current == 3" @next="next" finished></GameFour>
     </div>
   </section>
 </template>

@@ -1,5 +1,11 @@
-<script setup lang="ts"></script>
-<script>
+<script setup lang="ts">
+import { defineProps } from "vue";
+const props = defineProps<{
+  num: number;
+  finished: boolean;
+}>();
+</script>
+<script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
   data() {
@@ -148,6 +154,15 @@ const jump = function () {
             class="next button primary-button"
             :disabled="passed === false || color !== 'red'"
             @click="$emit('next')"
+            v-if="props.finished"
+          >
+            <span class="button-text">FINISHED</span>
+          </button>
+          <button
+            class="next button primary-button"
+            :disabled="passed === false || color !== 'red'"
+            @click="$emit('next')"
+            v-else
           >
             <span class="button-text">HERE WE GO!</span>
           </button>

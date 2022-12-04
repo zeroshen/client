@@ -16,13 +16,9 @@ export default defineComponent({
       '  <div class="question-box"></div>\n' +
       '  <div class="question-box"></div>\n' +
       '  <div class="question-box"></div>\n' +
-      '  <div class="question-box"></div>\n' +
-      '  <div class="question-box"></div>\n' +
-      '  <div class="question-box"></div>\n' +
       "</div>";
-    const color = "green";
     const disp = "block";
-    const flex_direction = "column";
+    const grid_cols = "1fr 1fr";
     const gap = "0";
     const passed = false;
     return {
@@ -30,7 +26,7 @@ export default defineComponent({
       blinking,
       html_code1,
       disp,
-      flex_direction,
+      grid_cols,
       gap,
       passed,
     };
@@ -45,8 +41,8 @@ export default defineComponent({
     },
     validate() {
       return (
-        this.disp === "flex" &&
-        this.flex_direction === "row" &&
+        this.disp === "grid" &&
+        this.grid_cols === "1fr 2fr 1fr" &&
         this.gap === "10px"
       );
     },
@@ -93,8 +89,8 @@ const jump = function () {
 }
 
 .rule {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   gap: 10px;
   border: 1px solid #aaaaaa;
   width: 350px;
@@ -112,14 +108,14 @@ const jump = function () {
 
 .rule-box {
   color: red;
-  width: 50px;
+  min-width: 50px;
   height: 50px;
   border: 1px solid #aaaaaa;
 }
 
 .question {
   display: v-bind(disp);
-  flex-direction: v-bind(flex_direction);
+  grid-template-columns: v-bind(grid_cols);
   gap: v-bind(gap);
   border: 1px solid #aaaaaa;
   width: 350px;
@@ -137,7 +133,7 @@ const jump = function () {
 
 .question-box {
   color: red;
-  width: 50px;
+  min-width: 50px;
   height: 50px;
   border: 1px solid #aaaaaa;
 }
@@ -205,22 +201,13 @@ const jump = function () {
             <div class="rule-box"></div>
             <div class="rule-box"></div>
             <div class="rule-box"></div>
-            <div class="rule-box"></div>
-            <div class="rule-box"></div>
-            <div class="rule-box"></div>
           </div>
           <div class="rule" @click="blink">
             <div class="rule-box"></div>
             <div class="rule-box"></div>
             <div class="rule-box"></div>
-            <div class="rule-box"></div>
-            <div class="rule-box"></div>
-            <div class="rule-box"></div>
           </div>
           <div class="question" @click="conditional_blink">
-            <div class="question-box"></div>
-            <div class="question-box"></div>
-            <div class="question-box"></div>
             <div class="question-box"></div>
             <div class="question-box"></div>
             <div class="question-box"></div>
@@ -236,13 +223,16 @@ const jump = function () {
                 <option value="flex">flex</option>
                 <option value="block">block</option>
                 <option value="none">none</option>
+                <option value="grid">grid</option>
               </select>
             </div>
             <div class="tab-1">
-              flex-direction:
-              <select v-model="flex_direction" class="tuner-mode-dropdown">
-                <option value="row">row</option>
-                <option value="column">column</option>
+              grid-template-columns:
+              <select v-model="grid_cols" class="tuner-mode-dropdown">
+                <option value="1fr">1fr</option>
+                <option value="1fr 1fr">1fr 1fr</option>
+                <option value="1fr 2fr 1fr">1fr 2fr 1fr</option>
+                <option value="auto">auto</option>
               </select>
             </div>
             <div class="tab-1">
@@ -260,7 +250,7 @@ const jump = function () {
           <div class="hint" :class="{ blink: blinking }"></div>
           <button
             class="next button primary-button"
-            :disabled="passed === false || !validate !== 'red'"
+            :disabled="passed === false || !validate()"
             @click="$emit('next')"
             v-if="props.finished"
           >
