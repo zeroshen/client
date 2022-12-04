@@ -10,6 +10,12 @@ header {
   min-height: 92px;
 }
 
+.text-logo {
+  font-family: var(--title-font-family);
+  text-decoration: none;
+  color: black;
+}
+
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -19,6 +25,10 @@ header {
 
 <template>
   <header class="container">
-    <div></div>
+    <h2>
+      <router-link to="/" class="text-logo">
+        Interactive Web Application Tutorial
+      </router-link>
+    </h2>
   </header>
 </template>
