@@ -60,13 +60,6 @@ const gameStages: GameItem[] = [
     gameDifficulty: "Master",
     gameStage: "8",
   },
-  {
-    gameId: 1009,
-    gameName: "Build and deploy the app",
-    gameDescription: "Final stage, build and deploy the app to finish the game",
-    gameDifficulty: "Master",
-    gameStage: "9",
-  },
 ];
 </script>
 <style scoped>

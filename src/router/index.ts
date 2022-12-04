@@ -5,8 +5,12 @@ import ImageTuner from "@/components/ImageTuner.vue";
 import ComponentsButtonView from "@/views/ComponentsButtonView.vue";
 import ComponentsAlertView from "@/views/ComponentsAlertView.vue";
 import ComponentsInputView from "@/views/ComponentsInputView.vue";
-import GamesLevelOneView from "@/views/GamesLevelOneView.vue";
+import GameLevelOneView from "@/views/GameLevelOneView.vue";
 import GameLevelOneQuizView from "@/views/GameLevelOneQuizView.vue";
+import GameLevelSixView from "@/views/GameLevelSixView.vue";
+import GameLevelSixQuizView from "@/views/GameLevelSixQuizView.vue";
+import GameLevelSevenView from "@/views/GameLevelSevenView.vue";
+import GameLevelSevenQuizView from "@/views/GameLevelSevenQuizView.vue";
 import GamesLevelThreeView from "@/views/GameLevelThreeView.vue";
 import GameLevelThreeQuizView from "@/views/GameLevelThreeQuizView.vue";
 import ComponentsLinkView from "@/views/ComponentsLinkView.vue";
@@ -52,7 +56,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/game/1",
     name: "games-level-1-view",
-    component: GamesLevelOneView,
+    component: GameLevelOneView,
     props: true,
   },
   {
@@ -89,6 +93,30 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/4",
     name: "games-level-4-view",
     component: GameLevelFourView,
+    props: true,
+  },
+  {
+    path: "/game/6",
+    name: "games-level-6-view",
+    component: GameLevelSixView,
+    props: true,
+  },
+  {
+    path: "/game/6/quiz",
+    name: "games-level-6-quiz-view",
+    component: GameLevelSixQuizView,
+    props: true,
+  },
+  {
+    path: "/game/7",
+    name: "games-level-7-view",
+    component: GameLevelSevenView,
+    props: true,
+  },
+  {
+    path: "/game/7/quiz",
+    name: "games-level-7-quiz-view",
+    component: GameLevelSevenQuizView,
     props: true,
   },
   /*Hard code need change later!*/
