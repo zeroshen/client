@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import QuizBox from "@/components/QuizBox.vue";
+import GameFirst from "@/stages/GameFirst.vue";
+import GameSecond from "@/stages/GemaSecond.vue";
 </script>
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -126,14 +128,8 @@ export default defineComponent({
 <template>
   <section class="game-view">
     <div class="game-quiz game-quiz-ready">
-      <quiz-box
-        :question="getQuestion(current)"
-        :num="0"
-        :finished="this.current >= this.questions.length - 1"
-        @answered="answered"
-        @next="next"
-        @finish="finish"
-      ></quiz-box>
+      <GameFirst v-show="current == 0" @next="next"></GameFirst>
+      <GameSecond v-show="current == 1" @next="next"></GameSecond>
     </div>
   </section>
 </template>

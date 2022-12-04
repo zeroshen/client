@@ -26,6 +26,9 @@ import TextTuner from "@/components/TextTuner.vue";
 import GameLevelTwoQuizView from "@/views/GameLevelTwoQuizView.vue";
 import AspectRatio from "@/components/AspectRatio.vue";
 import GameLevelFourView from "@/views/GameLevelFourView.vue";
+import GameFirst from "@/stages/GameFirst.vue";
+import GameSecond from "@/stages/GemaSecond.vue";
+import GameThird from "@/stages/GameThird.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -189,6 +192,21 @@ const routes: Array<RouteRecordRaw> = [
     name: "aspect-ratio-tuner",
     component: AspectRatio,
     props: true,
+  },
+  {
+    path: "/game/stage/1-1",
+    name: "stage-1-1",
+    component: GameFirst,
+  },
+  {
+    path: "/game/stage/1-2",
+    name: "stage-1-2",
+    component: GameSecond,
+  },
+  {
+    path: "/game/stage/1-3",
+    name: "stage-1-3",
+    component: GameThird,
   },
 ];
 
