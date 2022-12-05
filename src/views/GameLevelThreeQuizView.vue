@@ -91,6 +91,10 @@ const NextQuestion = () => {
 .options {
   margin-bottom: 1rem;
 }
+.game-level-view {
+  flex: 1;
+  min-height: 100%;
+}
 .option {
   padding: 1rem;
   display: block;
