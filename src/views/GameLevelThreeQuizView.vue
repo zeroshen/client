@@ -13,19 +13,20 @@ const questions = ref([
     selected: null,
   },
   {
-    question: "What is Vuex used for?",
+    question:
+      'Suppose my Vue component contains const product = "Broccoli" in the script setup section. Which of the following will print the header "Broccoli" in my HTML?',
     answer: 2,
-    options: ["Eating a delicious snack", "Viewing things", "State management"],
+    options: [
+      "<h1> @product </h1>",
+      "<h1> :product </h1> ",
+      "<h1> {{ product }} </h1> ",
+    ],
     selected: null,
   },
   {
-    question: "What is Vue Router?",
+    question: "To use a child component, where do we need to import it?",
     answer: 1,
-    options: [
-      "An ice cream maker",
-      "A routing library for Vue",
-      "Burger sauce",
-    ],
+    options: ["Child component", "Parent component", "Any component"],
     selected: null,
   },
 ]);

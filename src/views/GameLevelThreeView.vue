@@ -1,5 +1,25 @@
 <script setup></script>
 
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  data() {
+    const sample_code =
+      "\n<section>\n" +
+      '    <div id = "component_test">\n' +
+      "       <testcomponent></testcomponent>\n" +
+      "    </div>\n" +
+      '    <div id = "component_test1">\n' +
+      "       <testcomponent></testcomponent>\n" +
+      "    </div>\n" +
+      "</section>\n";
+    return { sample_code };
+  },
+  computed: {},
+  methods: {},
+});
+</script>
 <style scoped>
 .page-view {
   display: flex;
@@ -76,6 +96,22 @@
       Component Registration section.
       <br />
       Components can be reused as many times as you want.
+    </div>
+    <div class="group-words">
+      <h1>Example Usage</h1>
+      Vue Components are one of the important features of VueJS that creates
+      custom elements, which can be reused in HTML. Let’s work with an example
+      and create a component, that will give a better understanding on how
+      components work with VueJS.Here is the example:
+      <br />
+      <div class="sample-card">
+        <pre><code>{{sample_code}}</code></pre>
+      </div>
+      <br />
+      In the .vue file, we have created two div with id component_test and
+      component_test1. In the other .vue files, two Vue instances are created
+      with the div ids. We have created a common component to be used with both
+      the view instances.
     </div>
 
     <div class="group-words game-text">
