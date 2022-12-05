@@ -30,6 +30,7 @@ import TextTuner from "@/components/TextTuner.vue";
 import GameLevelTwoQuizView from "@/views/GameLevelTwoQuizView.vue";
 import AspectRatio from "@/components/AspectRatio.vue";
 import GameLevelFourView from "@/views/GameLevelFourView.vue";
+import GamesLevelFourView from "@/views/GameLevelFourQuizView.vue";
 import GameFirst from "@/stages/GameFirst.vue";
 import GameSecond from "@/stages/GemaSecond.vue";
 import GameThird from "@/stages/GameThird.vue";
@@ -93,6 +94,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/4",
     name: "games-level-4-view",
     component: GameLevelFourView,
+    props: true,
+  },
+  {
+    path: "/game/4/quiz",
+    name: "games-level-4-quiz-view",
+    component: GamesLevelFourView,
     props: true,
   },
   {

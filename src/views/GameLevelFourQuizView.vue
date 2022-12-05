@@ -132,11 +132,8 @@ export default defineComponent({
 <template>
   <section class="game-view">
     <div class="game-quiz game-quiz-ready">
-      <GameFirst v-show="current == 0" @next="next"></GameFirst>
-      <GameSecond v-show="current == 1" @next="next"></GameSecond>
-      <GameThird v-show="current == 2" @next="next"></GameThird>
       <GameFour
-        v-show="current == 3"
+        v-show="current == 0"
         @next="next"
         @finished="finish"
         finished

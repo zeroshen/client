@@ -145,6 +145,11 @@ const NextQuestion = () => {
   font-size: 1.5rem;
   text-align: center;
 }
+
+.game-level-view {
+  flex: 1;
+  min-height: 100%;
+}
 </style>
 
 <template>

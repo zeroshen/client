@@ -380,7 +380,7 @@ i {
       </div>
 
       <div class="game-quiz game-quiz-ready">
-        <router-link to="../game/2/quiz">
+        <router-link to="../game/4/quiz">
           <button class="quiz-button">Go to Quiz</button>
         </router-link>
       </div>
