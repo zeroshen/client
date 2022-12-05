@@ -17,7 +17,6 @@
   background-color: #00939c;
   color: #fafafa;
   border: none;
-  margin: 40px;
 }
 
 .quiz-button:hover {
@@ -30,6 +29,16 @@
   font-family: "Times New Roman";
   font-style: italic;
   color: darkgray;
+}
+.game-quiz {
+  min-width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2rem;
+  margin-bottom: 40px;
 }
 </style>
 
@@ -88,8 +97,10 @@
       <h3>Try to Build a Input</h3>
       Do something in the template file(TODO tags)
     </div>
-    <router-link to="../game/3/quiz">
-      <button class="quiz-button">Go to Quiz</button>
-    </router-link>
+    <div class="game-quiz">
+      <router-link to="../game/3/quiz">
+        <button class="quiz-button">Go to Quiz</button>
+      </router-link>
+    </div>
   </section>
 </template>

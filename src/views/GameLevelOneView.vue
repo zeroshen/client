@@ -17,7 +17,6 @@
   background-color: #00939c;
   color: #fafafa;
   border: none;
-  margin: 40px;
 }
 ol,
 ul {
@@ -34,6 +33,16 @@ ul {
   font-family: "Times New Roman";
   font-style: italic;
   color: darkgray;
+}
+.game-quiz {
+  min-width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2rem;
+  margin-bottom: 40px;
 }
 </style>
 
@@ -57,18 +66,14 @@ ul {
       that in mind, Vue is designed to be flexible and incrementally adoptable.
       Depending on your use case, Vue can be used in different ways:
       <br />
-      Enhancing static HTML without a build step
-      <br />
-      Embedding as Web Components on any page
-      <br />
-      Single-Page Application (SPA)
-      <br />
-      Fullstack / Server-Side Rendering (SSR)
-      <br />
-      Jamstack / Static Site Generation (SSG)
-      <br />
-      Targeting desktop, mobile, WebGL, and even the terminal
-      <br />
+      <ul>
+        <li>Enhancing static HTML without a build step</li>
+        <li>Embedding as Web Components on any page</li>
+        <li>Single-Page Application (SPA)</li>
+        <li>Fullstack / Server-Side Rendering (SSR)</li>
+        <li>Jamstack / Static Site Generation (SSG)</li>
+        <li>Targeting desktop, mobile, WebGL, and even the terminal</li>
+      </ul>
       If you find these concepts intimidating, don't worry! The tutorial and
       guide only require basic HTML and JavaScript knowledge, and you should be
       able to follow along without being an expert in any of these.
@@ -135,8 +140,10 @@ ul {
       Try to print something in console, you could modify the code in the
       "script" tag.
     </div>
-    <router-link to="../game/1/quiz">
-      <button class="quiz-button">Go to Quiz</button>
-    </router-link>
+    <div class="game-quiz">
+      <router-link to="../game/1/quiz">
+        <button class="quiz-button">Go to Quiz</button>
+      </router-link>
+    </div>
   </section>
 </template>
