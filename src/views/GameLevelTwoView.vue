@@ -4,8 +4,6 @@ import SampleCard from "@/components/SampleCard.vue";
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { QuizItem } from "@/types";
-import { QuizOption } from "@/types";
 
 export default defineComponent({
   data() {

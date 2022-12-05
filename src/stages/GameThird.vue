@@ -4,6 +4,8 @@ const props = defineProps<{
   num: number;
   finished: boolean;
 }>();
+import { useGameStore } from "@/store/game";
+const gameStore = useGameStore();
 </script>
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -20,7 +22,6 @@ export default defineComponent({
       '  <div class="question-box"></div>\n' +
       '  <div class="question-box"></div>\n' +
       "</div>";
-    const color = "green";
     const disp = "block";
     const flex_direction = "column";
     const gap = "0";
@@ -63,10 +64,6 @@ export default defineComponent({
     },
   },
 });
-
-const jump = function () {
-  return null;
-};
 </script>
 <style scoped>
 .page {
@@ -179,6 +176,10 @@ const jump = function () {
   background-color: #00939c;
 }
 
+.next:hover {
+  background-color: #016f75;
+}
+
 .next:disabled {
   background-color: #8f8f8f;
 }
@@ -255,7 +256,10 @@ const jump = function () {
           <button
             class="next button primary-button"
             :disabled="passed === false || !validate !== 'red'"
-            @click="$emit('finished')"
+            @click="
+              gameStore.add(1002);
+              $emit('finished');
+            "
             v-if="props.finished"
           >
             <span class="button-text">FINISHED</span>

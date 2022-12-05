@@ -110,7 +110,9 @@ textarea {
     color: inherit;
     font: inherit;
     margin: 0;
+
 }
+
 
 /* UTILITY CLASSES */
 
@@ -178,7 +180,8 @@ body {
 .button,
 .button:visited {
     display: inline-block;
-    background: var(--primary-color);
+
+    background-color: #00939c;
     color: white;
     text-decoration: none;
     padding: 0.5em 1em;
@@ -192,7 +195,7 @@ body {
 
 .button:hover,
 .button:active {
-    background: var(--primary-color-dark);
+    background:  #016f75;;
     color: white;
 }
 

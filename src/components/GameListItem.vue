@@ -4,6 +4,9 @@ import { GameItem } from "@/types";
 const props = defineProps<{
   game: GameItem;
 }>();
+
+import { useGameStore } from "@/store/game";
+const gameStore = useGameStore();
 </script>
 <style scoped>
 .list-item {
@@ -76,6 +79,15 @@ const props = defineProps<{
   border: none;
   cursor: pointer;
 }
+
+.list-item .list-item-end .completed {
+  background-color: #3d2c54;
+  color: #fafafa;
+}
+
+.list-item .list-item-end .completed:hover {
+  background-color: #181121;
+}
 </style>
 <template>
   <div class="list-item">
@@ -93,7 +105,14 @@ const props = defineProps<{
     </div>
     <div class="list-item-icon" v-else>{{ props.game.gameStage }}</div>
     <div class="list-item-words">
-      <div class="list-item-name">{{ props.game.gameName }}</div>
+      <div class="list-item-name">
+        {{ props.game.gameName }}
+        <span
+          class="text-color-vue-dark"
+          v-show="gameStore.completed.includes(props.game.gameId)"
+          >COMPLETED!
+        </span>
+      </div>
       <div class="list-item-description">{{ props.game.gameDescription }}</div>
       <div
         class="list-item-diff list-item-hard"
@@ -113,7 +132,13 @@ const props = defineProps<{
     </div>
     <router-link :to="'../game/' + props.game.gameStage">
       <div class="list-item-end">
-        <button>Let's GO</button>
+        <button
+          :class="{
+            completed: gameStore.completed.includes(props.game.gameId),
+          }"
+        >
+          Let's GO
+        </button>
       </div></router-link
     >
   </div>

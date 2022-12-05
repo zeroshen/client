@@ -1,5 +1,9 @@
 <script setup>
 import { ref, computed } from "vue";
+import { useGameStore } from "@/store/game";
+const gameStore = useGameStore();
+import { useRouter } from "vue-router";
+const router = useRouter();
 const questions = ref([
   {
     question: "What is Vue?",
@@ -211,6 +215,15 @@ const NextQuestion = () => {
     <section v-else>
       <h2>You have finished the quiz!</h2>
       <p>Your score is {{ score }}/{{ questions.length }}</p>
+      <button
+        class="next button primary-button"
+        @click="
+          gameStore.add(1001);
+          router.push({ name: 'games-view' });
+        "
+      >
+        <span class="button-text">FINISHED</span>
+      </button>
     </section>
   </main>
 </template>
