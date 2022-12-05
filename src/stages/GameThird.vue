@@ -97,7 +97,7 @@ const jump = function () {
   flex-direction: row;
   gap: 10px;
   border: 1px solid #aaaaaa;
-  width: 350px;
+  width: 230px;
   margin-bottom: 10px;
 }
 
@@ -122,7 +122,7 @@ const jump = function () {
   flex-direction: v-bind(flex_direction);
   gap: v-bind(gap);
   border: 1px solid #aaaaaa;
-  width: 350px;
+  width: 230px;
   margin-bottom: 10px;
 }
 
@@ -206,20 +206,14 @@ const jump = function () {
             <div class="rule-box"></div>
             <div class="rule-box"></div>
             <div class="rule-box"></div>
-            <div class="rule-box"></div>
-            <div class="rule-box"></div>
           </div>
           <div class="rule" @click="blink">
             <div class="rule-box"></div>
             <div class="rule-box"></div>
             <div class="rule-box"></div>
             <div class="rule-box"></div>
-            <div class="rule-box"></div>
-            <div class="rule-box"></div>
           </div>
           <div class="question" @click="conditional_blink">
-            <div class="question-box"></div>
-            <div class="question-box"></div>
             <div class="question-box"></div>
             <div class="question-box"></div>
             <div class="question-box"></div>
