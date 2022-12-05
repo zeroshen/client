@@ -154,6 +154,16 @@ const NextQuestion = () => {
   flex: 1;
   min-height: 100%;
 }
+
+.finished {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finished button {
+  margin-top: 25px;
+}
 </style>
 
 <template>
@@ -212,7 +222,7 @@ const NextQuestion = () => {
       </button>
     </section>
 
-    <section v-else>
+    <section class="finished" v-else>
       <h2>You have finished the quiz!</h2>
       <p>Your score is {{ score }}/{{ questions.length }}</p>
       <button
