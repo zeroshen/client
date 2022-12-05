@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import GameFour from "@/stages/GameFour.vue";
+import GameFive from "@/stages/GameFive.vue";
 </script>
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -37,12 +37,12 @@ export default defineComponent({
 <template>
   <section class="game-view">
     <div class="game-quiz game-quiz-ready">
-      <GameFour
+      <GameFive
         v-show="current == 0"
         @next="next"
         @finished="finish"
         finished
-      ></GameFour>
+      ></GameFive>
     </div>
   </section>
 </template>
