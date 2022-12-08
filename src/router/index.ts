@@ -35,6 +35,7 @@ import GameFirst from "@/stages/GameFirst.vue";
 import GameSecond from "@/stages/GemaSecond.vue";
 import GameThird from "@/stages/GameThird.vue";
 import GameFour from "@/stages/GameFour.vue";
+import GameSix from "@/stages/GameSix.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -248,6 +249,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/stage/1-4",
     name: "stage-1-4",
     component: GameFour,
+  },
+  {
+    path: "/game/stage/4-2",
+    name: "stage-4-2",
+    component: GameSix,
   },
 ];
 
