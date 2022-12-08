@@ -125,7 +125,7 @@ ul {
     </div>
 
     <div class="game-quiz">
-      <router-link to="../game/6/quiz">
+      <router-link to="../game/7/quiz">
         <button class="quiz-button">Go to Quiz</button>
       </router-link>
     </div>

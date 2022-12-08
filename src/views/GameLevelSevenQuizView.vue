@@ -1,31 +1,30 @@
 <script setup>
 import { ref, computed } from "vue";
+import { useGameStore } from "@/store/game";
+const gameStore = useGameStore();
+import { useRouter } from "vue-router";
+const router = useRouter();
 const questions = ref([
   {
-    question:
-      " Which of the following statement is correct for components props in Vue.js?",
-    answer: 0,
-    options: [
-      "Props are used to pass down data to the child components.",
-      "Props are custom attributes that you can register on a component.",
-      "When a value is passed to a prop attribute, it becomes a property on that component instance.",
-    ],
-    selected: null,
-  },
-  {
-    question: "What is Vuex used for?",
-    answer: 2,
-    options: ["Eating a delicious snack", "Viewing things", "State management"],
-    selected: null,
-  },
-  {
-    question: "What is Vue Router?",
+    question: "In a database, what is a relation?",
     answer: 1,
     options: [
-      "An ice cream maker",
-      "A routing library for Vue",
-      "Burger sauce",
+      "one column of information",
+      "a set of attributes (columns) that describe information about specific instances (rows) of an entity",
+      "two pieces of data on one row that are connected in meaning",
     ],
+    selected: null,
+  },
+  {
+    question: "Which one is not a dataset?",
+    answer: 2,
+    options: ["Data warehouses", "NoSQL databases", "REST Server"],
+    selected: null,
+  },
+  {
+    question: "Is SQL a programming language?",
+    answer: 0,
+    options: ["Yes", "No", "I do not know"],
     selected: null,
   },
 ]);
@@ -90,6 +89,10 @@ const NextQuestion = () => {
 .options {
   margin-bottom: 1rem;
 }
+.game-level-view {
+  flex: 1;
+  min-height: 100%;
+}
 .option {
   padding: 1rem;
   display: block;
@@ -150,6 +153,16 @@ const NextQuestion = () => {
   font-size: 1.5rem;
   text-align: center;
 }
+
+.finished {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finished button {
+  margin-top: 25px;
+}
 </style>
 
 <template>
@@ -208,9 +221,18 @@ const NextQuestion = () => {
       </button>
     </section>
 
-    <section v-else>
+    <section class="finished" v-else>
       <h2>You have finished the quiz!</h2>
       <p>Your score is {{ score }}/{{ questions.length }}</p>
+      <button
+        class="next button primary-button"
+        @click="
+          gameStore.add(1007);
+          router.push({ name: 'games-view' });
+        "
+      >
+        <span class="button-text">FINISHED</span>
+      </button>
     </section>
   </main>
 </template>
