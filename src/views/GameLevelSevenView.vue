@@ -17,7 +17,10 @@
   background-color: #00939c;
   color: #fafafa;
   border: none;
-  margin: 40px;
+}
+ol,
+ul {
+  list-style: circle;
 }
 
 .quiz-button:hover {
@@ -31,65 +34,126 @@
   font-style: italic;
   color: darkgray;
 }
+.game-quiz {
+  min-width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2rem;
+  margin-bottom: 40px;
+}
 </style>
 
 <template>
   <section class="page-view">
     <div class="group-words">
-      <h1 style="color: var(--vue-color-primary)">Stage 3 - Components</h1>
+      <h1 style="color: var(--vue-color-primary)">Stage 6 - REST api</h1>
     </div>
     <div class="group-words">
-      <h1>Components Basics</h1>
-      Components allow us to split the UI into independent and reusable pieces,
-      and think about each piece in isolation. It's common for an app to be
-      organized into a tree of nested components.
+      <h1>What's an API?</h1>
+      An API is a set of definitions and protocols for building and integrating
+      application software. It’s sometimes referred to as a contract between an
+      information provider and an information user—establishing the content
+      required from the consumer (the call) and the content required by the
+      producer (the response). For example, the API design for a weather service
+      could specify that the user supply a zip code and that the producer reply
+      with a 2-part answer, the first being the high temperature, and the second
+      being the low.
       <br />
-      This is very similar to how we nest native HTML elements, but Vue
-      implements its own component model that allow us to encapsulate custom
-      content and logic in each component. Vue also plays nicely with native Web
-      Components. If you are curious about the relationship between Vue
-      Components and native Web Components.
+      In other words, if you want to interact with a computer or system to
+      retrieve information or perform a function, an API helps you communicate
+      what you want to that system so it can understand and fulfill the request.
+      <br />
+      You can think of an API as a mediator between the users or clients and the
+      resources or web services they want to get. It’s also a way for an
+      organization to share resources and information while maintaining
+      security, control, and authentication—determining who gets access to what.
+      <br />
+      Another advantage of an API is that you don’t have to know the specifics
+      of caching—how your resource is retrieved or where it comes from.
     </div>
     <div class="group-words">
-      <h1>Using a Component</h1>
-      To use a child component, we need to import it in the parent component.
-      Assuming we placed our counter component inside a file called
-      ButtonCounter.vue, the component will be exposed as the file's default
-      export:
+      <h1>REST</h1>
+      REST is a set of architectural constraints, not a protocol or a standard.
+      API developers can implement REST in a variety of ways.
       <br />
-      To expose the imported component to our template, we need to register it
-      with the components option. The component will then be available as a tag
-      using the key it is registered under.
+      When a client request is made via a RESTful API, it transfers a
+      representation of the state of the resource to the requester or endpoint.
+      This information, or representation, is delivered in one of several
+      formats via HTTP: JSON (Javascript Object Notation), HTML, XLT, Python,
+      PHP, or plain text. JSON is the most generally popular file format to use
+      because, despite its name, it’s language-agnostic, as well as readable by
+      both humans and machines.
       <br />
-      It's also possible to globally register a component, making it available
-      to all components in a given app without having to import it. The pros and
-      cons of global vs. local registration is discussed in the dedicated
-      Component Registration section.
+      Something else to keep in mind: Headers and parameters are also important
+      in the HTTP methods of a RESTful API HTTP request, as they contain
+      important identifier information as to the request's metadata,
+      authorization, uniform resource identifier (URI), caching, cookies, and
+      more. There are request headers and response headers, each with their own
+      HTTP connection information and status codes.
       <br />
-      Components can be reused as many times as you want.
+      In order for an API to be considered RESTful, it has to conform to these
+      criteria:
+      <br />
+      <ul>
+        <li>
+          A client-server architecture made up of clients, servers, and
+          resources, with requests managed through HTTP.
+        </li>
+        <li>
+          Stateless client-server communication, meaning no client information
+          is stored between get requests and each request is separate and
+          unconnected.
+        </li>
+        <li>Cacheable data that streamlines client-server interactions.</li>
+        <li>
+          A uniform interface between components so that information is
+          transferred in a standard form. This requires that:
+          <ul>
+            <li>
+              resources requested are identifiable and separate from the
+              representations sent to the client.
+            </li>
+            <li>
+              resources can be manipulated by the client via the representation
+              they receive because the representation contains enough
+              information to do so.
+            </li>
+            <li>
+              self-descriptive messages returned to the client have enough
+              information to describe how the client should process it.
+            </li>
+            <li>
+              hypertext/hypermedia is available, meaning that after accessing a
+              resource the client should be able to use hyperlinks to find all
+              other currently available actions they can take.
+            </li>
+          </ul>
+        </li>
+        <li>
+          A layered system that organizes each type of server (those responsible
+          for security, load-balancing, etc.) involved the retrieval of
+          requested information into hierarchies, invisible to the client.
+        </li>
+        <li>
+          Code-on-demand (optional): the ability to send executable code from
+          the server to the client when requested, extending client
+          functionality.
+        </li>
+      </ul>
+      <br />
+      Though the REST API has these criteria to conform to, it is still
+      considered easier to use than a prescribed protocol like SOAP (Simple
+      Object Access Protocol), which has specific requirements like XML
+      messaging, and built-in security and transaction compliance that make it
+      slower and heavier.
     </div>
-
-    <div class="group-words game-text">
-      <h1>Try to Build Your Own Components</h1>
-      Mary has been familiar with structure of vue file, and she tried to write
-      some CSS codes for the websites. It is time for her to build some
-      components for the website, and then she could maintain the websites
-      conveniently.
-      <br />
-      <br />
-      <h3>Try to Build a Button</h3>
-      Do something in the template file(TODO tags)
-      <br />
-      <br />
-      <h3>Try to Build a Link</h3>
-      Do something in the template file(TODO tags)
-      <br />
-      <br />
-      <h3>Try to Build a Input</h3>
-      Do something in the template file(TODO tags)
+    <div class="game-quiz">
+      <router-link to="../game/6/quiz">
+        <button class="quiz-button">Go to Quiz</button>
+      </router-link>
     </div>
-    <router-link to="../game/3/quiz">
-      <button class="quiz-button">Go to Quiz</button>
-    </router-link>
   </section>
 </template>
