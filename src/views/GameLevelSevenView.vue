@@ -49,107 +49,81 @@ ul {
 <template>
   <section class="page-view">
     <div class="group-words">
-      <h1 style="color: var(--vue-color-primary)">Stage 6 - REST api</h1>
+      <h1 style="color: var(--vue-color-primary)">Stage 7 - Database</h1>
     </div>
     <div class="group-words">
-      <h1>What's an API?</h1>
-      An API is a set of definitions and protocols for building and integrating
-      application software. It’s sometimes referred to as a contract between an
-      information provider and an information user—establishing the content
-      required from the consumer (the call) and the content required by the
-      producer (the response). For example, the API design for a weather service
-      could specify that the user supply a zip code and that the producer reply
-      with a 2-part answer, the first being the high temperature, and the second
-      being the low.
+      <h1>What's a database?</h1>
+      A database is an organized collection of structured information, or data,
+      typically stored electronically in a computer system. A database is
+      usually controlled by a database management system (DBMS). Together, the
+      data and the DBMS, along with the applications that are associated with
+      them, are referred to as a database system, often shortened to just
+      database.
       <br />
-      In other words, if you want to interact with a computer or system to
-      retrieve information or perform a function, an API helps you communicate
-      what you want to that system so it can understand and fulfill the request.
-      <br />
-      You can think of an API as a mediator between the users or clients and the
-      resources or web services they want to get. It’s also a way for an
-      organization to share resources and information while maintaining
-      security, control, and authentication—determining who gets access to what.
-      <br />
-      Another advantage of an API is that you don’t have to know the specifics
-      of caching—how your resource is retrieved or where it comes from.
+      Data within the most common types of databases in operation today is
+      typically modeled in rows and columns in a series of tables to make
+      processing and data querying efficient. The data can then be easily
+      accessed, managed, modified, updated, controlled, and organized. Most
+      databases use structured query language (SQL) for writing and querying
+      data.
     </div>
     <div class="group-words">
-      <h1>REST</h1>
-      REST is a set of architectural constraints, not a protocol or a standard.
-      API developers can implement REST in a variety of ways.
-      <br />
-      When a client request is made via a RESTful API, it transfers a
-      representation of the state of the resource to the requester or endpoint.
-      This information, or representation, is delivered in one of several
-      formats via HTTP: JSON (Javascript Object Notation), HTML, XLT, Python,
-      PHP, or plain text. JSON is the most generally popular file format to use
-      because, despite its name, it’s language-agnostic, as well as readable by
-      both humans and machines.
-      <br />
-      Something else to keep in mind: Headers and parameters are also important
-      in the HTTP methods of a RESTful API HTTP request, as they contain
-      important identifier information as to the request's metadata,
-      authorization, uniform resource identifier (URI), caching, cookies, and
-      more. There are request headers and response headers, each with their own
-      HTTP connection information and status codes.
-      <br />
-      In order for an API to be considered RESTful, it has to conform to these
-      criteria:
-      <br />
+      <h1>What is Structured Query Language (SQL)?</h1>
+      SQL is a programming language used by nearly all relational databases to
+      query, manipulate, and define data, and to provide access control. SQL was
+      first developed at IBM in the 1970s with Oracle as a major contributor,
+      which led to implementation of the SQL ANSI standard, SQL has spurred many
+      extensions from companies such as IBM, Oracle, and Microsoft. Although SQL
+      is still widely used today, new programming languages are beginning to
+      appear.
+    </div>
+    <div class="group-words">
+      <h1>Evolution of the database</h1>
+      Databases have evolved dramatically since their inception in the early
+      1960s. Navigational databases such as the hierarchical database (which
+      relied on a tree-like model and allowed only a one-to-many relationship),
+      and the network database (a more flexible model that allowed multiple
+      relationships), were the original systems used to store and manipulate
+      data. Although simple, these early systems were inflexible. In the 1980s,
+      relational databases became popular, followed by object-oriented databases
+      in the 1990s. More recently, NoSQL databases came about as a response to
+      the growth of the internet and the need for faster speed and processing of
+      unstructured data. Today, cloud databases and self-driving databases are
+      breaking new ground when it comes to how data is collected, stored,
+      managed, and utilized.
+    </div>
+    <div class="group-words">
+      <h1>What’s the difference between a database and a spreadsheet?</h1>
+      Databases and spreadsheets (such as Microsoft Excel) are both convenient
+      ways to store information. The primary differences between the two are:
       <ul>
-        <li>
-          A client-server architecture made up of clients, servers, and
-          resources, with requests managed through HTTP.
-        </li>
-        <li>
-          Stateless client-server communication, meaning no client information
-          is stored between get requests and each request is separate and
-          unconnected.
-        </li>
-        <li>Cacheable data that streamlines client-server interactions.</li>
-        <li>
-          A uniform interface between components so that information is
-          transferred in a standard form. This requires that:
-          <ul>
-            <li>
-              resources requested are identifiable and separate from the
-              representations sent to the client.
-            </li>
-            <li>
-              resources can be manipulated by the client via the representation
-              they receive because the representation contains enough
-              information to do so.
-            </li>
-            <li>
-              self-descriptive messages returned to the client have enough
-              information to describe how the client should process it.
-            </li>
-            <li>
-              hypertext/hypermedia is available, meaning that after accessing a
-              resource the client should be able to use hyperlinks to find all
-              other currently available actions they can take.
-            </li>
-          </ul>
-        </li>
-        <li>
-          A layered system that organizes each type of server (those responsible
-          for security, load-balancing, etc.) involved the retrieval of
-          requested information into hierarchies, invisible to the client.
-        </li>
-        <li>
-          Code-on-demand (optional): the ability to send executable code from
-          the server to the client when requested, extending client
-          functionality.
-        </li>
+        <li>How the data is stored and manipulated</li>
+        <li>Who can access the data</li>
+        <li>How much data can be stored</li>
       </ul>
-      <br />
-      Though the REST API has these criteria to conform to, it is still
-      considered easier to use than a prescribed protocol like SOAP (Simple
-      Object Access Protocol), which has specific requirements like XML
-      messaging, and built-in security and transaction compliance that make it
-      slower and heavier.
+      Spreadsheets were originally designed for one user, and their
+      characteristics reflect that. They’re great for a single user or small
+      number of users who don’t need to do a lot of incredibly complicated data
+      manipulation. Databases, on the other hand, are designed to hold much
+      larger collections of organized information—massive amounts, sometimes.
+      Databases allow multiple users at the same time to quickly and securely
+      access and query the data using highly complex logic and language.
     </div>
+    <div class="group-words">
+      <h1>Types of databases</h1>
+      There are many different types of databases. The best database for a
+      specific organization depends on how the organization intends to use the
+      data. Here are some datasets:
+      <ul>
+        <li>Relational databases</li>
+        <li>Object-oriented databases</li>
+        <li>Distributed databases</li>
+        <li>Data warehouses</li>
+        <li>NoSQL databases</li>
+        <li>Graph databases</li>
+      </ul>
+    </div>
+
     <div class="game-quiz">
       <router-link to="../game/6/quiz">
         <button class="quiz-button">Go to Quiz</button>

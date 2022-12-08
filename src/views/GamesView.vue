@@ -48,7 +48,7 @@ const gameStages: GameItem[] = [
   },
   {
     gameId: 1007,
-    gameName: "Database configuration",
+    gameName: "Database",
     gameDescription: "Introduction to database",
     gameDifficulty: "Intermediate",
     gameStage: "7",
