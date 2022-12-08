@@ -1,31 +1,27 @@
 <script setup>
 import { ref, computed } from "vue";
+import { useGameStore } from "@/store/game";
+const gameStore = useGameStore();
+import { useRouter } from "vue-router";
+const router = useRouter();
 const questions = ref([
   {
-    question:
-      " Which of the following statement is correct for components props in Vue.js?",
-    answer: 0,
-    options: [
-      "Props are used to pass down data to the child components.",
-      "Props are custom attributes that you can register on a component.",
-      "When a value is passed to a prop attribute, it becomes a property on that component instance.",
-    ],
-    selected: null,
-  },
-  {
-    question: "What is Vuex used for?",
-    answer: 2,
-    options: ["Eating a delicious snack", "Viewing things", "State management"],
-    selected: null,
-  },
-  {
-    question: "What is Vue Router?",
+    question: "What is REST?",
     answer: 1,
-    options: [
-      "An ice cream maker",
-      "A routing library for Vue",
-      "Burger sauce",
-    ],
+    options: ["A protocol", "A set of architectural constraints", "A standard"],
+    selected: null,
+  },
+  {
+    question:
+      "A RESTful API is a service that runs on the web over HTTP to facilitate access to web resources.",
+    answer: 0,
+    options: ["True", "False"],
+    selected: null,
+  },
+  {
+    question: "Where does the client get the api information?",
+    answer: 1,
+    options: ["Local storage", "Server", "Website"],
     selected: null,
   },
 ]);
@@ -150,6 +146,21 @@ const NextQuestion = () => {
   font-size: 1.5rem;
   text-align: center;
 }
+
+.game-level-view {
+  flex: 1;
+  min-height: 100%;
+}
+
+.finished {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finished button {
+  margin-top: 25px;
+}
 </style>
 
 <template>
@@ -208,9 +219,18 @@ const NextQuestion = () => {
       </button>
     </section>
 
-    <section v-else>
+    <section class="finished" v-else>
       <h2>You have finished the quiz!</h2>
       <p>Your score is {{ score }}/{{ questions.length }}</p>
+      <button
+        class="next button primary-button"
+        @click="
+          gameStore.add(1006);
+          router.push({ name: 'games-view' });
+        "
+      >
+        <span class="button-text">FINISHED</span>
+      </button>
     </section>
   </main>
 </template>

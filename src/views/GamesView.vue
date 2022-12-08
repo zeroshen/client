@@ -41,15 +41,15 @@ const gameStages: GameItem[] = [
   },
   {
     gameId: 1006,
-    gameName: "Server api",
-    gameDescription: "Introduction to server api building on a Tomcat server",
+    gameName: "REST api",
+    gameDescription: "Introduction to REST api",
     gameDifficulty: "Master",
     gameStage: "6",
   },
   {
     gameId: 1007,
     gameName: "Database configuration",
-    gameDescription: "Introduction to server api",
+    gameDescription: "Introduction to dataset",
     gameDifficulty: "Intermediate",
     gameStage: "7",
   },
