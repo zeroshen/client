@@ -49,7 +49,7 @@ ul {
 <template>
   <section class="page-view">
     <div class="group-words">
-      <h1 style="color: var(--vue-color-primary)">Stage 5 - REST api</h1>
+      <h1 style="color: var(--vue-color-primary)">Stage 6 - REST api</h1>
     </div>
     <div class="group-words">
       <h1>What's an API?</h1>
