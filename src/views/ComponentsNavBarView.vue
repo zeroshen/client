@@ -91,7 +91,7 @@ nav ul li:hover {
   <div class="page">
     <NavList></NavList>
     <section class="code-container">
-      <h1>NavBar</h1>
+      <h1>Tab</h1>
       <section class="components">
         <nav id="navbar">
           <ul>
