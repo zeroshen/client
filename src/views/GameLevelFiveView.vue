@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useGameStore } from "@/store/game";
+const gameStore = useGameStore();
 const brackets = "{{}}";
 </script>
 
@@ -308,8 +310,10 @@ export default defineComponent({
       </div>
 
       <div class="game-quiz game-quiz-ready">
-        <router-link to="../game/5/quiz">
-          <button class="quiz-button">Go to Quiz</button>
+        <router-link to="../game">
+          <button @click="gameStore.add(1005)" class="quiz-button">
+            Finish
+          </button>
         </router-link>
       </div>
     </div>

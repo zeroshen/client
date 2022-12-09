@@ -7,8 +7,6 @@ const props = defineProps<{
 
 import { useGameStore } from "@/store/game";
 const gameStore = useGameStore();
-
-const filename = "moby-dick.gif";
 </script>
 <script lang="ts">
 import { defineComponent } from "vue";

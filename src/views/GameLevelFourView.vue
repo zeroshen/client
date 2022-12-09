@@ -353,8 +353,11 @@ i {
           Material Design
           <br />
           <br />
-          <h3>Download the Template</h3>
-          <router-link to="/template"> Template Link </router-link>
+          <h3>
+            Download the Template, access it through the code base in
+            TemplateWallView.vue
+          </h3>
+          <router-link to="/templatewall"> Template Link </router-link>
           <br />
           <br />
           <h3>
@@ -366,12 +369,24 @@ i {
           </a>
           <br />
           <br />
-          <h3>Style the components</h3>
-          We have gave you an example of navigation drawer, which includes
-          styling properties of border, layout, margin, padding, colors, and
-          alignment following the design guidelines of Material Design. Try
-          modify another components in the template which you think would be
-          useful for your page.
+          <h3>Modify the layout</h3>
+          We have provided you a very basic grid layout. It is your time to
+          create a little past works portfolio for yourself. When we were
+          creating this template we were thinking of a photo wall showing off
+          past works. But you can make your own modifications, the grids don't
+          need to be all the same size. You can replace the placeholders with
+          many different things, like images, cards, boxes or other things you
+          like!.
+          <br />
+          <br />
+          <h3>Look up for how to integrate databse and frontend</h3>
+          We have provided you a very basic grid layout. It is your time to
+          create a little past works portfolio for yourself. When we were
+          creating this template we were thinking of a photo wall showing off
+          past works. But you can make your own modifications, the grids don't
+          need to be all the same size. You can replace the placeholders with
+          many different things, like images, cards, boxes or other things you
+          like!.
         </div>
       </div>
 

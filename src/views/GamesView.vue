@@ -55,8 +55,8 @@ const gameStages: GameItem[] = [
   },
   {
     gameId: 1008,
-    gameName: "Fullstack",
-    gameDescription: "Retrieve information from server api!",
+    gameName: "Wrapping up",
+    gameDescription: "Wrapping up this journey of web dev!",
     gameDifficulty: "Master",
     gameStage: "8",
   },

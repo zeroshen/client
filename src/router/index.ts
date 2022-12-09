@@ -23,6 +23,7 @@ import AudioPlayerTuner from "@/components/AudioPlayerTuner.vue";
 import VideoPlayerTuner from "@/components/VideoPlayerTuner.vue";
 import GameLevelTwoView from "@/views/GameLevelTwoView.vue";
 import TemplateView from "@/views/TemplateView.vue";
+import TemplateWallView from "@/views/TemplateWallView.vue";
 import ComponentsBadgeView from "@/views/ComponentsBadgeView.vue";
 import NavigationTuner from "@/components/NavigationTuner.vue";
 import SampleCard from "@/components/SampleCard.vue";
@@ -38,6 +39,7 @@ import GameFour from "@/stages/GameFour.vue";
 import GameSix from "@/stages/GameSix.vue";
 import GameLevelFiveView from "@/views/GameLevelFiveView.vue";
 import GameLevelFiveQuizView from "@/views/GameLevelFiveQuizView.vue";
+import GameLevelEightView from "@/views/GameLevelEightView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -55,6 +57,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/template",
     name: "template-view",
     component: TemplateView,
+    props: true,
+  },
+  {
+    path: "/templatewall",
+    name: "template-wall-view",
+    component: TemplateWallView,
     props: true,
   },
   {
@@ -139,6 +147,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/7/quiz",
     name: "games-level-7-quiz-view",
     component: GameLevelSevenQuizView,
+    props: true,
+  },
+  {
+    path: "/game/8/",
+    name: "games-level-8-view",
+    component: GameLevelEightView,
     props: true,
   },
   /*Hard code need change later!*/
