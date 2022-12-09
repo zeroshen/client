@@ -36,6 +36,8 @@ import GameSecond from "@/stages/GemaSecond.vue";
 import GameThird from "@/stages/GameThird.vue";
 import GameFour from "@/stages/GameFour.vue";
 import GameSix from "@/stages/GameSix.vue";
+import GameLevelFiveView from "@/views/GameLevelFiveView.vue";
+import GameLevelFiveQuizView from "@/views/GameLevelFiveQuizView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -101,6 +103,18 @@ const routes: Array<RouteRecordRaw> = [
     path: "/game/4/quiz",
     name: "games-level-4-quiz-view",
     component: GamesLevelFourView,
+    props: true,
+  },
+  {
+    path: "/game/5",
+    name: "games-level-5-view",
+    component: GameLevelFiveView,
+    props: true,
+  },
+  {
+    path: "/game/5/quiz",
+    name: "games-level-5-quiz-view",
+    component: GameLevelFiveQuizView,
     props: true,
   },
   {
